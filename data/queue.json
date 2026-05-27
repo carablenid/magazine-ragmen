@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "3a7b5819-1ed5-5e5a-99d1-180d41c53d8e",
-      "artist": "Blok3",
-      "title": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama - Yeniçağ Gazetesi",
-      "summary": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama  Yeniçağ Gazetesi",
-      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQk1kNUhXbjlSdEM5TjhxV09pVThYSDU2NGwtbkNLZ0dpNU9UWU1SY2VDSTh1VlZ1bmxuYzZWbXJYUGd5cExoYmxyRkJhbEJUMjhyeWtsZGFNdDY1bnBqYjZKdEIzM2YtRWNnVnZOUGs1NVFrOGN4d3dBV1Y5UTltRm1kQy03Rjgtb3dWV0E4RFd1X3dhcmxQUVhScnB5czduQ0E?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:45.155882",
-      "published_at": "2026-05-21T12:59:00"
-    },
-    {
       "id": "b6d6f791-7e34-5c14-b077-7aefc650daf5",
       "artist": "Blok3",
       "title": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika! - politikam.com",
@@ -232,6 +222,17 @@
       "scraped_at": "2026-05-27T13:28:42.361255",
       "published_at": "2026-05-21T05:55:17",
       "posted_at": "2026-05-27T13:28:50.932439"
+    },
+    {
+      "id": "3a7b5819-1ed5-5e5a-99d1-180d41c53d8e",
+      "artist": "Blok3",
+      "title": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama - Yeniçağ Gazetesi",
+      "summary": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama  Yeniçağ Gazetesi",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQk1kNUhXbjlSdEM5TjhxV09pVThYSDU2NGwtbkNLZ0dpNU9UWU1SY2VDSTh1VlZ1bmxuYzZWbXJYUGd5cExoYmxyRkJhbEJUMjhyeWtsZGFNdDY1bnBqYjZKdEIzM2YtRWNnVnZOUGs1NVFrOGN4d3dBV1Y5UTltRm1kQy03Rjgtb3dWV0E4RFd1X3dhcmxQUVhScnB5czduQ0E?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:45.155882",
+      "published_at": "2026-05-21T12:59:00",
+      "posted_at": "2026-05-27T14:39:50.631409"
     }
   ],
   "last_scrape": "2026-05-27T14:37:26.222890"
