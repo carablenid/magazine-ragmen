@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "f5a2c63f-9ef1-5d0b-be0d-6251a5a8a55b",
-      "artist": "Blok3",
-      "title": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş” - Gazete3",
-      "summary": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş”  Gazete3",
-      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRU9DX21hZjdvWGNJU3hsOVJDeXNPODNHNU9VTkQyWUhvaEdYVmdCeU5HTEJmMlJFbWJTQlhXdGt3LTRpanpieXFEYlJmQU1SdHBhd3h0Z001Q1hMZHNfc28tRVRJRWFvZFhGaHlpRkRBREkteEhrOVNiZXhOLTRhRndKVkZBcUhtMl9PZA?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:42.722552",
-      "published_at": "2026-05-21T12:49:38"
-    },
-    {
       "id": "cb6330e7-f016-5d01-a659-b9950d09ced7",
       "artist": "Blok3",
       "title": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı - Bursada Bugün",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:42.538762",
       "published_at": "2026-05-21T07:07:17"
+    },
+    {
+      "id": "f5a2c63f-9ef1-5d0b-be0d-6251a5a8a55b",
+      "artist": "Blok3",
+      "title": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş” - Gazete3",
+      "summary": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş”  Gazete3",
+      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRU9DX21hZjdvWGNJU3hsOVJDeXNPODNHNU9VTkQyWUhvaEdYVmdCeU5HTEJmMlJFbWJTQlhXdGt3LTRpanpieXFEYlJmQU1SdHBhd3h0Z001Q1hMZHNfc28tRVRJRWFvZFhGaHlpRkRBREkteEhrOVNiZXhOLTRhRndKVkZBcUhtMl9PZA?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.722552",
+      "published_at": "2026-05-21T12:49:38"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T13:33:46.336789"
+  "last_scrape": "2026-05-27T13:39:06.390977"
 }
