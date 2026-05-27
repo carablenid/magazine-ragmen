@@ -149,6 +149,19 @@ def create_post_image(item: dict) -> Image.Image:
     # 4. Logo
     canvas = _add_logo(canvas)
 
+    # 5. Watermark — sağ alt köşe
+    draw = ImageDraw.Draw(canvas)
+    wm_font = _load_font(22, bold=False)
+    wm_text = "@magazineragmen"
+    wm_padding = 18
+    bbox = draw.textbbox((0, 0), wm_text, font=wm_font)
+    wm_w = bbox[2] - bbox[0]
+    wm_h = bbox[3] - bbox[1]
+    wm_x = W - wm_w - wm_padding
+    wm_y = H - wm_h - wm_padding
+    draw.text((wm_x + 1, wm_y + 1), wm_text, font=wm_font, fill=(0, 0, 0, 160))
+    draw.text((wm_x, wm_y), wm_text, font=wm_font, fill=(255, 255, 255, 200))
+
     return canvas.convert("RGB")
 
 

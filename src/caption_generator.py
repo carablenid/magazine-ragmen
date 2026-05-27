@@ -41,6 +41,8 @@ def generate_caption(item: dict) -> str:
             f"Başlık: {item['title']}\n"
             f"Özet: {item.get('summary', '')[:300]}\n\n"
             f"Bu haber için Instagram caption yaz. "
+            f"'Başarılı geçti', 'güzel bir etkinlikti' gibi muğlak ifadeler kullanma. "
+            f"Rakam, rekor, olay, tepki gibi spesifik detay varsa onu öne çıkar. "
             f"Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
         )
 
