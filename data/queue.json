@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "7f051552-7c0b-5c5f-a51a-12fd9a4cb9a0",
-      "artist": "Blok3",
-      "title": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!” - Kanal 3 Tv",
-      "summary": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!”  Kanal 3 Tv",
-      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOFdoQVNTUTUyRnVnZ29oVzJsZ1g0TXBVa3VEOXdfQ3laUXNYUUJUbGF4TUVzYUJ2cGd6QW1ELTYzdERFWnBYU2M0Unp4UDFDSDB3ZWNvb0ZrNFNFS1JZc0RJT3paTHJPR0RxbDMxcGVjOU5mNE0xeGM2UE1Oak02UEUzNWFFYUQtUmhkYUhCV0tWZGd3bUE?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:44.564490",
-      "published_at": "2026-05-21T11:21:05"
-    },
-    {
       "id": "b8c6ef63-7cc3-571c-a2ba-686f31e1118b",
       "artist": "Blok3",
       "title": "Blok3 gözaltına mı alındı? SON DAKİKA! Blok3 neden gözaltına alındı, gerçek adı ne? Hakan Aydın kimdir, kaç yaşında? - Haberler",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:44.390810",
       "published_at": "2026-05-21T12:37:00"
+    },
+    {
+      "id": "7f051552-7c0b-5c5f-a51a-12fd9a4cb9a0",
+      "artist": "Blok3",
+      "title": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!” - Kanal 3 Tv",
+      "summary": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!”  Kanal 3 Tv",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOFdoQVNTUTUyRnVnZ29oVzJsZ1g0TXBVa3VEOXdfQ3laUXNYUUJUbGF4TUVzYUJ2cGd6QW1ELTYzdERFWnBYU2M0Unp4UDFDSDB3ZWNvb0ZrNFNFS1JZc0RJT3paTHJPR0RxbDMxcGVjOU5mNE0xeGM2UE1Oak02UEUzNWFFYUQtUmhkYUhCV0tWZGd3bUE?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.564490",
+      "published_at": "2026-05-21T11:21:05"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T14:24:17.945035"
+  "last_scrape": "2026-05-27T14:29:05.444611"
 }
