@@ -45,15 +45,15 @@ def _click_first(page, selectors: list[str], timeout: int = 8000):
     raise RuntimeError(f"Hiçbir selector bulunamadı: {selectors}")
 
 
-def _js_click_text(page, text: str) -> bool:
-    """DOM'da exact text ile eşleşen görünür ilk elemente JS click atar."""
+def _js_click_text_in_dialog(page, text: str) -> bool:
+    """Create new post dialog içinde exact text ile eşleşen ilk elemente JS click atar."""
     return page.evaluate(f"""
         () => {{
-            const all = document.querySelectorAll('*');
+            const dialog = document.querySelector('div[role="dialog"]');
+            if (!dialog) return false;
+            const all = dialog.querySelectorAll('*');
             for (const el of all) {{
-                if (el.children.length === 0 &&
-                    el.textContent.trim() === '{text}' &&
-                    el.offsetParent !== null) {{
+                if (el.textContent.trim() === '{text}' && el.offsetParent !== null) {{
                     el.dispatchEvent(new MouseEvent('click', {{bubbles: true, cancelable: true}}));
                     return true;
                 }}
@@ -152,12 +152,12 @@ def post_photo(image_path: str, caption: str) -> str:
         page.wait_for_timeout(1500)
         _shot(page, "06_caption_filled")
 
-        # Share — önce JS ile dene (disabled state'i de aşar)
+        # Share — dialog içinde JS click (dialog dışındaki Share butonlarını atla)
         log.info("Share tıklanıyor...")
-        clicked = _js_click_text(page, "Share")
+        clicked = _js_click_text_in_dialog(page, "Share")
         if not clicked:
-            # JS başarısız olduysa Playwright force click
-            page.click('text=Share', force=True, timeout=10000)
+            # JS başarısız → Playwright locator ile dialog'a scope'la
+            page.locator('div[role="dialog"]').locator('text=Share').click(force=True, timeout=10000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
         page.wait_for_timeout(7000)
         _shot(page, "07_after_share")
