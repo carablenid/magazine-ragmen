@@ -20,3 +20,7 @@
 **Başlık:** Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!”
 **Kaynak:** https://news.google.com/rss/articles/CBMilgFBVV95cUxOOFdoQVNTUTUyRnVnZ29oVzJsZ1g0TXBVa3VEOXdfQ3laUXNYUUJUbGF4TUVzYUJ2cGd6QW1ELTYzdERFWnBYU2M0Unp4UDFDSDB3ZWNvb0ZrNFNFS1JZc0RJT3paTHJPR0RxbDMxcGVjOU5mNE0xeGM2UE1Oak02UEUzNWFFYUQtUmhkYUhCV0tWZGd3bUE?oc=5
 
+## 2026-05-27 19:55 UTC — Blok3
+**Başlık:** Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş”
+**Kaynak:** https://news.google.com/rss/articles/CBMijAFBVV95cUxPRU9DX21hZjdvWGNJU3hsOVJDeXNPODNHNU9VTkQyWUhvaEdYVmdCeU5HTEJmMlJFbWJTQlhXdGt3LTRpanpieXFEYlJmQU1SdHBhd3h0Z001Q1hMZHNfc28tRVRJRWFvZFhGaHlpRkRBREkteEhrOVNiZXhOLTRhRndKVkZBcUhtMl9PZA?oc=5
+
