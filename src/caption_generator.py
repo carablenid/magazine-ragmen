@@ -30,9 +30,10 @@ def generate_caption(item: dict) -> str:
             f"Sanatçı: {item['artist']}\n"
             f"Konu: {item['title']}\n"
             f"Özet: {item.get('summary', '')[:300]}\n\n"
-            f"Bu bilgiyi 'Fun Fact:' veya 'Biliyor muydun?' formatında ilgi çekici bir "
-            f"Instagram caption olarak sun. Güncel haber gibi değil, eğlenceli bir bilgi "
-            f"paylaşımı olarak yaz. Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
+            f"Bu bilgiyi magazin tarzında kısa bir fun fact olarak yaz. "
+            f"'Kimdir?' veya 'Biliyor muydun?' tarzı soru sorma — direkt bilgiyi ver. "
+            f"Haber yazmıyorsun, sahne bilgisi paylaşıyorsun. "
+            f"Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
         )
     else:
         prompt = (
