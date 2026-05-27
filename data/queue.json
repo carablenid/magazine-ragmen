@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "3c0e16e0-9714-53c1-a39a-6cd0731b43ca",
-      "artist": "Blok3",
-      "title": "BLOK3’ün “La Catedral” gecesi yok satıyor - Haberton",
-      "summary": "BLOK3’ün “La Catedral” gecesi yok satıyor  Haberton",
-      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3dEt0cjhZUVAydUd5Z2IxcjhFbGxfdDE4SFB6TEdaSmxlNjVDWlhGNUpWMkhzc1UtdHJnc01QOTBaX0d3azNoLVczNkJWU2N5MldxUHROdTNMa3ZtM2RVNUV2d21mOXBfZTJpOA?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:43.291129",
-      "published_at": "2026-05-21T07:25:47"
-    },
-    {
       "id": "fb134f0c-46ac-5a17-8443-8899fb656a8c",
       "artist": "Blok3",
       "title": "Festival skandalında ters köşe: Blok3 davasından 10 milyon TL’lik şantaj çıktı! - Sabah",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:43.110990",
       "published_at": "2026-05-21T12:23:15"
+    },
+    {
+      "id": "3c0e16e0-9714-53c1-a39a-6cd0731b43ca",
+      "artist": "Blok3",
+      "title": "BLOK3’ün “La Catedral” gecesi yok satıyor - Haberton",
+      "summary": "BLOK3’ün “La Catedral” gecesi yok satıyor  Haberton",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3dEt0cjhZUVAydUd5Z2IxcjhFbGxfdDE4SFB6TEdaSmxlNjVDWlhGNUpWMkhzc1UtdHJnc01QOTBaX0d3azNoLVczNkJWU2N5MldxUHROdTNMa3ZtM2RVNUV2d21mOXBfZTJpOA?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.291129",
+      "published_at": "2026-05-21T07:25:47"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T13:54:37.966707"
+  "last_scrape": "2026-05-27T13:57:39.150350"
 }
