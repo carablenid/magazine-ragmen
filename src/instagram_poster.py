@@ -122,18 +122,22 @@ def post_photo(image_path: str, caption: str) -> str:
         _shot(page, "05_after_filter_next")
 
         # Caption ekranı
-        caption_sel = 'div[role="textbox"], textarea[placeholder], div[contenteditable="true"]'
+        caption_sel = 'div[role="textbox"], div[contenteditable="true"]'
         page.wait_for_selector(caption_sel, timeout=15000)
         page.click(caption_sel)
-        page.fill(caption_sel, caption)
+        # keyboard.type ile yaz — fill() Instagram JS eventlarını tetiklemiyor
+        page.keyboard.type(caption)
         log.info("Caption girildi.")
+        page.wait_for_timeout(3000)
         _shot(page, "06_caption_filled")
 
-        # Share
+        # Share (Instagram header'da text link, button değil)
+        _shot(page, "06b_before_share")
         _click_first(page, [
             'text=Share',
             '[role="button"]:has-text("Share")',
             'button:has-text("Share")',
+            'a:has-text("Share")',
         ], timeout=15000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
         page.wait_for_timeout(6000)
