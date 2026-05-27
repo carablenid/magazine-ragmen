@@ -1,72 +1,89 @@
 import os
+import json
+import base64
 import logging
+import tempfile
 from pathlib import Path
-
-from instagrapi import Client
-from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes
 
 log = logging.getLogger(__name__)
 
-SESSION_FILE = Path("session.json")
-_client: Client | None = None
+SESSION_FILE = Path("playwright_session.json")
 
 
-def _get_client() -> Client:
-    global _client
-    if _client is not None:
-        return _client
-
-    cl = Client()
-    cl.delay_range = [2, 5]
-
-    session_id = os.environ.get("INSTAGRAM_SESSION_ID")
-    username = os.environ["INSTAGRAM_USERNAME"]
-    password = os.environ["INSTAGRAM_PASSWORD"]
-
-    if session_id:
-        # Challenge yok — browser session ID ile giriş
-        try:
-            cl.login_by_sessionid(session_id)
-            log.info("Session ID ile giriş başarılı.")
-            cl.dump_settings(str(SESSION_FILE))
-            _client = cl
-            return cl
-        except Exception as e:
-            log.warning("Session ID ile giriş başarısız: %s — username/password deniyor.", e)
-
+def _load_session() -> dict:
+    # GitHub Actions: base64 encoded secret
+    b64 = os.environ.get("INSTAGRAM_PLAYWRIGHT_SESSION")
+    if b64:
+        return json.loads(base64.b64decode(b64).decode())
+    # Lokal: dosyadan
     if SESSION_FILE.exists():
-        try:
-            cl.load_settings(str(SESSION_FILE))
-            cl.login(username, password)
-            log.info("Kayıtlı session ile giriş başarılı.")
-            _client = cl
-            return cl
-        except Exception as e:
-            log.warning("Kayıtlı session geçersiz: %s — yeniden giriş yapılıyor.", e)
-            _client = None
-            cl = Client()
-            cl.delay_range = [2, 5]
-
-    cl.login(username, password)
-    cl.dump_settings(str(SESSION_FILE))
-    log.info("Yeni session oluşturuldu.")
-    _client = cl
-    return cl
+        return json.loads(SESSION_FILE.read_text(encoding="utf-8"))
+    raise RuntimeError(
+        "Instagram session bulunamadı. "
+        "create_session.py çalıştırarak playwright_session.json oluştur."
+    )
 
 
 def post_photo(image_path: str, caption: str) -> str:
-    cl = _get_client()
-    try:
-        media = cl.photo_upload(image_path, caption)
-    except (LoginRequired, Exception) as e:
-        if "login" in str(e).lower() or "session" in str(e).lower():
-            log.warning("Session süresi dolmuş, yeniden giriş yapılıyor.")
-            global _client
-            _client = None
-            cl = _get_client()
-            media = cl.photo_upload(image_path, caption)
-        else:
-            raise
-    cl.dump_settings(str(SESSION_FILE))
-    log.info("Post yayınlandı: %s", media.pk)
-    return str(media.pk)
+    from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+
+    session = _load_session()
+    abs_path = str(Path(image_path).resolve())
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+        )
+        ctx = browser.new_context(
+            storage_state=session,
+            viewport={"width": 1280, "height": 900},
+            user_agent=(
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+        )
+        page = ctx.new_page()
+
+        log.info("Instagram ana sayfasına gidiliyor...")
+        page.goto("https://www.instagram.com/", wait_until="networkidle", timeout=30000)
+
+        if "accounts/login" in page.url:
+            browser.close()
+            raise RuntimeError("Instagram session geçersiz. create_session.py ile yenile.")
+
+        log.info("Yeni post akışı başlatılıyor...")
+
+        # "Create" / yeni post butonuna tıkla
+        page.click('a[href="/create/select/"], svg[aria-label="New post"], '
+                   '[aria-label="New post"]', timeout=10000)
+
+        # Dosya seçici
+        with page.expect_file_chooser(timeout=10000) as fc_info:
+            page.click('button:has-text("Select from computer")', timeout=8000)
+        fc_info.value.set_files(abs_path)
+        log.info("Görsel yüklendi.")
+
+        # Crop ekranı → Next
+        page.wait_for_selector('div[role="dialog"] button:has-text("Next")', timeout=20000)
+        page.click('div[role="dialog"] button:has-text("Next")')
+
+        # Filter ekranı → Next
+        page.wait_for_selector('div[role="dialog"] button:has-text("Next")', timeout=10000)
+        page.click('div[role="dialog"] button:has-text("Next")')
+
+        # Caption ekranı
+        caption_sel = 'div[role="dialog"] div[role="textbox"], div[role="dialog"] textarea'
+        page.wait_for_selector(caption_sel, timeout=10000)
+        page.fill(caption_sel, caption)
+        log.info("Caption girildi.")
+
+        # Share
+        page.click('div[role="dialog"] button:has-text("Share")', timeout=10000)
+        page.wait_for_timeout(5000)  # Post işleminin tamamlanması için bekle
+        log.info("Post paylaşıldı!")
+
+        browser.close()
+
+    return "posted_via_playwright"
