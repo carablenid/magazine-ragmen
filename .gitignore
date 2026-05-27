@@ -1,4 +1,5 @@
 .env
+.claude/
 session.json
 __pycache__/
 *.pyc
