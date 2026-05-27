@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "b6d6f791-7e34-5c14-b077-7aefc650daf5",
-      "artist": "Blok3",
-      "title": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika! - politikam.com",
-      "summary": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika!  politikam.com",
-      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTjRfdEJiejl0SHZfZzJLSWt2cUhWazI1Zk5TU0dJb2ktUEYyYkdPUWZXTG1jTW1seVZISDhOdkJUbU9rNjkxNWw0Tkxjd2VZWV94THMwRktJNFhwVU5sekx3THBoYXIxajZZTXVwNUhpT2FHVm1HRmxFaW91MndUZnZpb1Z4NTA?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:45.340549",
-      "published_at": "2026-05-21T07:35:00"
-    },
-    {
       "id": "7f5b2c17-18e4-54da-b6d9-4f93ad1230a9",
       "artist": "Ati242",
       "title": "Ati242: Everest (2021) - IMDb",
@@ -233,6 +223,17 @@
       "scraped_at": "2026-05-27T13:28:45.155882",
       "published_at": "2026-05-21T12:59:00",
       "posted_at": "2026-05-27T14:39:50.631409"
+    },
+    {
+      "id": "b6d6f791-7e34-5c14-b077-7aefc650daf5",
+      "artist": "Blok3",
+      "title": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika! - politikam.com",
+      "summary": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika!  politikam.com",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTjRfdEJiejl0SHZfZzJLSWt2cUhWazI1Zk5TU0dJb2ktUEYyYkdPUWZXTG1jTW1seVZISDhOdkJUbU9rNjkxNWw0Tkxjd2VZWV94THMwRktJNFhwVU5sekx3THBoYXIxajZZTXVwNUhpT2FHVm1HRmxFaW91MndUZnZpb1Z4NTA?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:45.340549",
+      "published_at": "2026-05-21T07:35:00",
+      "posted_at": "2026-05-27T14:43:56.373963"
     }
   ],
   "last_scrape": "2026-05-27T14:37:26.222890"
