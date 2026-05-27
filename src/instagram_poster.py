@@ -1,5 +1,4 @@
 import os
-import json
 import base64
 import logging
 import tempfile
@@ -11,7 +10,6 @@ SESSION_FILE = Path("playwright_session.json")
 
 
 def _load_session_path() -> str:
-    """Session'ı geçici bir dosyaya yaz ve yolunu döndür."""
     b64 = os.environ.get("INSTAGRAM_PLAYWRIGHT_SESSION")
     if b64:
         b64 = b64.encode("ascii", errors="ignore").decode("ascii").strip()
@@ -28,8 +26,19 @@ def _load_session_path() -> str:
     )
 
 
+def _click_first(page, selectors: list[str], timeout: int = 8000):
+    for sel in selectors:
+        try:
+            page.wait_for_selector(sel, timeout=timeout)
+            page.click(sel, timeout=timeout)
+            return sel
+        except Exception:
+            continue
+    raise RuntimeError(f"Hiçbir selector bulunamadı: {selectors}")
+
+
 def post_photo(image_path: str, caption: str) -> str:
-    from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+    from playwright.sync_api import sync_playwright
 
     session_path = _load_session_path()
     abs_path = str(Path(image_path).resolve())
@@ -52,40 +61,67 @@ def post_photo(image_path: str, caption: str) -> str:
 
         log.info("Instagram ana sayfasına gidiliyor...")
         page.goto("https://www.instagram.com/", wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(3000)
 
         if "accounts/login" in page.url:
             browser.close()
             raise RuntimeError("Instagram session geçersiz. create_session.py ile yenile.")
 
+        log.info("Mevcut URL: %s", page.url)
         log.info("Yeni post akışı başlatılıyor...")
 
-        # "Create" / yeni post butonuna tıkla
-        page.click('a[href="/create/select/"], svg[aria-label="New post"], '
-                   '[aria-label="New post"]', timeout=10000)
+        # Create butonu
+        _click_first(page, [
+            'a[href="/create/select/"]',
+            '[aria-label="New post"]',
+            'svg[aria-label="New post"]',
+        ], timeout=10000)
+        page.wait_for_timeout(2000)
 
         # Dosya seçici
-        with page.expect_file_chooser(timeout=10000) as fc_info:
-            page.click('button:has-text("Select from computer")', timeout=8000)
+        with page.expect_file_chooser(timeout=15000) as fc_info:
+            _click_first(page, [
+                'button:has-text("Select from computer")',
+                '[role="button"]:has-text("Select from computer")',
+                'input[type="file"]',
+            ], timeout=10000)
         fc_info.value.set_files(abs_path)
-        log.info("Görsel yüklendi.")
+        log.info("Görsel yüklendi, crop ekranı bekleniyor...")
+        page.wait_for_timeout(4000)
 
         # Crop ekranı → Next
-        page.wait_for_selector('div[role="dialog"] button:has-text("Next")', timeout=20000)
-        page.click('div[role="dialog"] button:has-text("Next")')
+        _click_first(page, [
+            'button:has-text("Next")',
+            '[aria-label="Next"]',
+            'div[role="dialog"] button:has-text("Next")',
+        ], timeout=30000)
+        log.info("Crop Next tıklandı.")
+        page.wait_for_timeout(2000)
 
         # Filter ekranı → Next
-        page.wait_for_selector('div[role="dialog"] button:has-text("Next")', timeout=10000)
-        page.click('div[role="dialog"] button:has-text("Next")')
+        _click_first(page, [
+            'button:has-text("Next")',
+            '[aria-label="Next"]',
+            'div[role="dialog"] button:has-text("Next")',
+        ], timeout=15000)
+        log.info("Filter Next tıklandı.")
+        page.wait_for_timeout(2000)
 
         # Caption ekranı
-        caption_sel = 'div[role="dialog"] div[role="textbox"], div[role="dialog"] textarea'
-        page.wait_for_selector(caption_sel, timeout=10000)
+        caption_sel = 'div[role="textbox"], textarea[placeholder], div[contenteditable="true"]'
+        page.wait_for_selector(caption_sel, timeout=15000)
+        page.click(caption_sel)
         page.fill(caption_sel, caption)
         log.info("Caption girildi.")
 
         # Share
-        page.click('div[role="dialog"] button:has-text("Share")', timeout=10000)
-        page.wait_for_timeout(5000)  # Post işleminin tamamlanması için bekle
+        _click_first(page, [
+            'button:has-text("Share")',
+            '[aria-label="Share"]',
+            'div[role="dialog"] button:has-text("Share")',
+        ], timeout=15000)
+        log.info("Share tıklandı, tamamlanması bekleniyor...")
+        page.wait_for_timeout(6000)
         log.info("Post paylaşıldı!")
 
         browser.close()
