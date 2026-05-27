@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "89fa873c-a062-5c59-914c-b7ff0bfa12a1",
-      "artist": "Blok3",
-      "title": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma - Memurlar.Net",
-      "summary": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma  Memurlar.Net",
-      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOWVvOFNOemxFYVlILU1VT0h3ZXhvUC1PbUlVU3NHRkhtOWMzU25neV9mRTYwOTFMZTNvQWdnN19fZXozOVNKdzA4OWRMMmJhUTlvcE5nLUh2RUZfcUFxRm1pRmVESXlzODJxR0tOQlNzY2ZTcVQ2c1V2NEkweXNTaklGMkpZSkpJM1pBOERRM1JmM1duSGtabm5NMXJuZHVGNkxtYkVrMy0zS3ZiTnfSAbYBQVVfeXFMUEE3RlFpNWh3d252UzhYZEZlaTRXRnVQaEhaMVd5aHpXWWxYa2xGV3RHTm5YTncycFBFcGphNjBIU2lZNC1zQkgtWEtoVnRPLXFscDdSVi1MTW9jZnB1dU1ud2ZyVWhvQmhza2NQVWhscml2NHUtT0tQWnZqWXBFczZuRGRDZkJtZUZ4ZnlaUHdackJyUkZyLXpyNmsyZm9UbFF4UnBkQjd4UHdmcjJpVUdoeXdUSmc?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:44.037450",
-      "published_at": "2026-05-17T07:00:00"
-    },
-    {
       "id": "2016bbc8-bed1-5d7c-a689-c9ae7382d380",
       "artist": "Blok3",
       "title": "Blok3 davasından şantaj çıktı: “10 milyon TL ödeyin, dosyadan çıkaralım” - A Haber",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:43.872070",
       "published_at": "2026-05-21T06:15:00"
+    },
+    {
+      "id": "89fa873c-a062-5c59-914c-b7ff0bfa12a1",
+      "artist": "Blok3",
+      "title": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma - Memurlar.Net",
+      "summary": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma  Memurlar.Net",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOWVvOFNOemxFYVlILU1VT0h3ZXhvUC1PbUlVU3NHRkhtOWMzU25neV9mRTYwOTFMZTNvQWdnN19fZXozOVNKdzA4OWRMMmJhUTlvcE5nLUh2RUZfcUFxRm1pRmVESXlzODJxR0tOQlNzY2ZTcVQ2c1V2NEkweXNTaklGMkpZSkpJM1pBOERRM1JmM1duSGtabm5NMXJuZHVGNkxtYkVrMy0zS3ZiTnfSAbYBQVVfeXFMUEE3RlFpNWh3d252UzhYZEZlaTRXRnVQaEhaMVd5aHpXWWxYa2xGV3RHTm5YTncycFBFcGphNjBIU2lZNC1zQkgtWEtoVnRPLXFscDdSVi1MTW9jZnB1dU1ud2ZyVWhvQmhza2NQVWhscml2NHUtT0tQWnZqWXBFczZuRGRDZkJtZUZ4ZnlaUHdackJyUkZyLXpyNmsyZm9UbFF4UnBkQjd4UHdmcjJpVUdoeXdUSmc?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.037450",
+      "published_at": "2026-05-17T07:00:00"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T14:11:59.618512"
+  "last_scrape": "2026-05-27T14:16:24.000432"
 }
