@@ -7,9 +7,10 @@ _client: anthropic.Anthropic | None = None
 
 SYSTEM_PROMPT = (
     "Sen 'Magazine Rağmen' adlı Türkiye rap sahnesinin magazin Instagram sayfasının "
-    "editörüsün. Kısa, enerjik, sokak diline yakın Türkçe captions yazıyorsun. "
-    "Abartılı veya sahte coşku yok — doğal, direkt bir ses tonu. "
-    "Emoji kullanabilirsin ama aşırıya kaçma. "
+    "editörüsün. Kısa, sert, bilgi odaklı Türkçe captions yazıyorsun. "
+    "Sahte coşku yok, aşırı samimiyet yok — soğukkanlı, mesafeli bir gazetecilik tonu. "
+    "Okuyucuyla arkadaş gibi konuşma; haber ver. "
+    "Emoji kullanabilirsin ama azı karar. "
     "Hashtag EKLEME — onlar ayrıca eklenecek."
 )
 
@@ -24,13 +25,23 @@ def _get_client() -> anthropic.Anthropic:
 def generate_caption(item: dict) -> str:
     client = _get_client()
 
-    prompt = (
-        f"Sanatçı: {item['artist']}\n"
-        f"Başlık: {item['title']}\n"
-        f"Özet: {item.get('summary', '')[:300]}\n\n"
-        f"Bu haber için Instagram caption yaz. "
-        f"Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
-    )
+    if item.get("is_fun_fact"):
+        prompt = (
+            f"Sanatçı: {item['artist']}\n"
+            f"Konu: {item['title']}\n"
+            f"Özet: {item.get('summary', '')[:300]}\n\n"
+            f"Bu bilgiyi 'Fun Fact:' veya 'Biliyor muydun?' formatında ilgi çekici bir "
+            f"Instagram caption olarak sun. Güncel haber gibi değil, eğlenceli bir bilgi "
+            f"paylaşımı olarak yaz. Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
+        )
+    else:
+        prompt = (
+            f"Sanatçı: {item['artist']}\n"
+            f"Başlık: {item['title']}\n"
+            f"Özet: {item.get('summary', '')[:300]}\n\n"
+            f"Bu haber için Instagram caption yaz. "
+            f"Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
+        )
 
     resp = client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -41,7 +52,6 @@ def generate_caption(item: dict) -> str:
 
     caption = resp.content[0].text.strip()
 
-    # hashtag'leri ekle
     tags = " ".join(HASHTAGS[:5])
     artist_tag = "#" + item["artist"].lower().replace(" ", "").replace("ş", "s").replace("ı", "i")
     return f"{caption}\n\n{artist_tag} {tags}"

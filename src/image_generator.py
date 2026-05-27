@@ -7,6 +7,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 from config import IMAGE_SIZE, FONT_PATH, FONT_PATH_REGULAR, LOGO_PATH
+from src.photo_finder import find_artist_photo
 
 log = logging.getLogger(__name__)
 
@@ -105,14 +106,14 @@ def _add_logo(img: Image.Image) -> Image.Image:
 
 
 def create_post_image(item: dict) -> Image.Image:
-    # 1. Arka plan görseli
-    bg = None
-    if item.get("image_url"):
+    # 1. Arka plan görseli — önce DuckDuckGo'dan sanatçı fotoğrafı, yoksa fallback
+    bg = find_artist_photo(item["artist"])
+    if bg is None and item.get("image_url"):
         bg = _download_image(item["image_url"])
+        if bg is not None:
+            bg = _crop_to_square(bg)
     if bg is None:
         bg = _fallback_background(item["artist"])
-    else:
-        bg = _crop_to_square(bg)
 
     # RGBA'ya çevir
     bg = bg.convert("RGBA")
