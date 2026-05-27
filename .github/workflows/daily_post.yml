@@ -71,6 +71,6 @@ jobs:
         run: |
           git config user.name "MagazineRagmenBot"
           git config user.email "carablenid@gmail.com"
-          git add data/queue.json
-          git diff --staged --quiet || git commit -m "chore: queue güncelle [$(date -u +%Y-%m-%dT%H:%M)]"
+          git add data/queue.json data/post_log.md
+          git diff --staged --quiet || git commit -m "chore: queue + kaynaklar güncelle [$(date -u +%Y-%m-%dT%H:%M)]"
           git push

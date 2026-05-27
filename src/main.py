@@ -14,6 +14,7 @@ from src.instagram_poster import post_photo
 from src.queue_manager import (
     add_items, queue_size, pop_items, mark_as_posted, clean_old_items
 )
+from src.vault_logger import log_post
 
 logging.basicConfig(
     level=logging.INFO,
@@ -72,6 +73,7 @@ def run():
     try:
         post_photo(img_path, caption)
         mark_as_posted([item])
+        log_post(item)
         log.info("=== Başarıyla tamamlandı. ===")
     except Exception as e:
         import traceback
