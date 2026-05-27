@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "640b0830-84da-54b5-8cb0-202678c42550",
-      "artist": "Blok3",
-      "title": "Blok3 neden gözaltına alındı, gerçek adı ne, kaç yaşında? - Kanal 3 Tv",
-      "summary": "Blok3 neden gözaltına alındı, gerçek adı ne, kaç yaşında?  Kanal 3 Tv",
-      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRktCZmU0Nm5FN1JsY2NEZHdWcHVHczU0aVpZVnJzT3FUTDlSbmRWZTdyazZGOUp5QlM3UUdVTUI5ckNqVnI4bTVZdFlibHRaTUJFOWNLM3AzOWJsekhQeW5PeXJYRmxnUl9BTkJRNWZuM1hVZkV5X0FzSkZLRGs1dHNjVjVHbC1D?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:42.538762",
-      "published_at": "2026-05-21T07:07:17"
-    },
-    {
       "id": "f5a2c63f-9ef1-5d0b-be0d-6251a5a8a55b",
       "artist": "Blok3",
       "title": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş” - Gazete3",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:48.987949",
       "published_at": "2026-05-18T22:14:06"
+    },
+    {
+      "id": "640b0830-84da-54b5-8cb0-202678c42550",
+      "artist": "Blok3",
+      "title": "Blok3 neden gözaltına alındı, gerçek adı ne, kaç yaşında? - Kanal 3 Tv",
+      "summary": "Blok3 neden gözaltına alındı, gerçek adı ne, kaç yaşında?  Kanal 3 Tv",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRktCZmU0Nm5FN1JsY2NEZHdWcHVHczU0aVpZVnJzT3FUTDlSbmRWZTdyazZGOUp5QlM3UUdVTUI5ckNqVnI4bTVZdFlibHRaTUJFOWNLM3AzOWJsekhQeW5PeXJYRmxnUl9BTkJRNWZuM1hVZkV5X0FzSkZLRGs1dHNjVjVHbC1D?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.538762",
+      "published_at": "2026-05-21T07:07:17"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T13:28:49.558984"
+  "last_scrape": "2026-05-27T13:33:46.336789"
 }
