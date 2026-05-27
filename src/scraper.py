@@ -45,6 +45,14 @@ def _fetch_rss(url: str) -> feedparser.FeedParserDict:
         return feedparser.FeedParserDict(entries=[])
 
 
+def _clean_title(title: str) -> str:
+    """'Başlık - Kaynak Adı' → 'Başlık' (son ' - Kaynak' kısmını kaldır)."""
+    parts = title.rsplit(" - ", 1)
+    if len(parts) == 2 and 1 <= len(parts[1].split()) <= 5:
+        return parts[0].strip()
+    return title.strip()
+
+
 def _entry_published(entry) -> datetime | None:
     if hasattr(entry, "published_parsed") and entry.published_parsed:
         return datetime(*entry.published_parsed[:6])
@@ -104,7 +112,7 @@ def scrape_google_news() -> list[dict]:
             pub = _entry_published(entry)
             item = make_item(
                 artist=artist,
-                title=entry.title,
+                title=_clean_title(entry.title),
                 summary=BeautifulSoup(summary, "lxml").get_text()[:400],
                 source_url=entry.link,
                 image_url=image_url,

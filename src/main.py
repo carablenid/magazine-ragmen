@@ -15,6 +15,7 @@ from src.queue_manager import (
     add_items, queue_size, pop_items, mark_as_posted, clean_old_items
 )
 from src.vault_logger import log_post
+from src.scraper import _clean_title
 from src.post_validator import validate_item, validate_caption
 
 logging.basicConfig(
@@ -60,6 +61,8 @@ def run():
         log.warning("Kuyruktan geçen içerik yok. Çalışma bitti.")
         return
 
+    # Mevcut kuyruktaki eski başlıklardan kaynak adını temizle
+    item["title"] = _clean_title(item["title"])
     log.info("İşleniyor: %s — %s", item["artist"], item["title"])
 
     # Caption

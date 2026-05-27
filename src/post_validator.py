@@ -11,15 +11,19 @@ log = logging.getLogger(__name__)
 
 MAX_AGE_HOURS = 168  # 7 gün — bunun üzerindeki içerik KESİNLİKLE yayınlanmaz
 
+# Başlıkta geçen bu fragment'lar → RED
 BLACKLISTED_TITLE_FRAGMENTS = [
-    "- IMDb", "| IMDb", "– IMDb",  # film/müzik veritabanı, haber değil
+    "imdb",           # IMDb (büyük/küçük harf → aşağıda case-insensitive)
     "(Film)", "(Albüm)", "(Single)",
 ]
 
+# Başlıkta regex eşleşmesi → RED
 BLACKLISTED_TITLE_PATTERNS = [
-    r"^[^\?]{3,50}\s+[Nn]ereli\?",      # "X Nereli?" — biyografik, haber değil
-    r"^[^\?]{3,50}\s+[Kk]imdir\?",       # "X Kimdir?"
-    r"\(\d{4}\)\s*[-–|]",               # "Şarkı Adı (2019) - Site" — eski içerik
+    r"nereli\?",            # "X Nereli?" — biyografik, magazin değil
+    r"\bkimdir\?",          # "X Kimdir?"
+    r"kaç yaşında",         # "kaç yaşında" — biyografik soru, magazin değil
+    r"gerçek adı ne",       # "gerçek adı ne" — biyografik
+    r"\(\d{4}\)\s*[-–|]",  # "Şarkı Adı (2019) - Site" — eski içerik
 ]
 
 BLACKLISTED_DOMAINS = [
@@ -46,28 +50,28 @@ def _age_hours(item: dict) -> float:
 
 def validate_item(item: dict) -> tuple[bool, str]:
     """Post öncesi içeriği doğrular. (False, neden) döndürürse item atlanır."""
-    title = item.get("title", "")
+    title = item.get("title", "").lower()
     source = item.get("source_url", "")
 
     # 1. Yaş kontrolü — ASLA kabul edilmez
     age = _age_hours(item)
     if age > MAX_AGE_HOURS:
-        return False, f"İçerik {age:.0f} saat ({age/24:.1f} gün) eski — limit {MAX_AGE_HOURS}s"
+        return False, f"İçerik {age:.0f}s ({age/24:.1f} gün) eski — limit {MAX_AGE_HOURS}s"
 
-    # 2. Blacklisted title fragment
+    # 2. Blacklisted title fragment (case-insensitive — title zaten lower())
     for frag in BLACKLISTED_TITLE_FRAGMENTS:
-        if frag in title:
-            return False, f"Redlisted başlık fragmenti '{frag}': {title[:60]}"
+        if frag.lower() in title:
+            return False, f"Redlisted başlık: '{frag}' tespit edildi"
 
     # 3. Blacklisted title pattern
     for pattern in BLACKLISTED_TITLE_PATTERNS:
         if re.search(pattern, title, re.IGNORECASE):
-            return False, f"Redlisted başlık paterni ({pattern}): {title[:60]}"
+            return False, f"Redlisted başlık paterni: {pattern}"
 
     # 4. Blacklisted domain
     for domain in BLACKLISTED_DOMAINS:
         if domain in source:
-            return False, f"Redlisted kaynak ({domain})"
+            return False, f"Redlisted kaynak: {domain}"
 
     return True, "OK"
 
