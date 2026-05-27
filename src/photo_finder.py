@@ -16,37 +16,75 @@ HEADERS = {
     )
 }
 
-_SEARCH_QUERIES = [
+_DDGS_QUERIES = [
     "{artist} rapper türkiye",
     "{artist} müzisyen",
     "{artist} türkçe rap",
     "{artist}",
 ]
 
+_WIKI_VARIANTS = [
+    "{artist}",
+    "{artist} (rapper)",
+    "{artist} (musician)",
+]
 
-def _search_image_url(artist: str) -> str | None:
+
+def _ascii_slug(text: str) -> str:
+    return (
+        text.replace("ş", "s").replace("Ş", "S")
+        .replace("ı", "i").replace("İ", "I")
+        .replace("ğ", "g").replace("Ğ", "G")
+        .replace("ü", "u").replace("Ü", "U")
+        .replace("ö", "o").replace("Ö", "O")
+        .replace("ç", "c").replace("Ç", "C")
+    )
+
+
+def _wikipedia_image_url(artist: str) -> str | None:
+    names = [artist, _ascii_slug(artist)]
+    for variant in _WIKI_VARIANTS:
+        for name in names:
+            title = variant.format(artist=name)
+            try:
+                url = (
+                    "https://en.wikipedia.org/api/rest_v1/page/summary/"
+                    + requests.utils.quote(title, safe="")
+                )
+                r = requests.get(url, headers=HEADERS, timeout=10)
+                if r.status_code == 200:
+                    data = r.json()
+                    thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
+                    if thumb:
+                        log.info("Wikipedia'dan fotoğraf bulundu: %s → %s", title, thumb[:60])
+                        return thumb
+            except Exception as e:
+                log.debug("Wikipedia sorgusu başarısız (%s): %s", title, e)
+    return None
+
+
+def _ddgs_image_url(artist: str) -> str | None:
     try:
-        from duckduckgo_search import DDGS
+        from ddgs import DDGS
     except ImportError:
-        log.error("duckduckgo-search paketi yüklü değil.")
-        return None
+        try:
+            from duckduckgo_search import DDGS
+        except ImportError:
+            log.warning("ddgs paketi yüklü değil.")
+            return None
 
-    for template in _SEARCH_QUERIES:
+    for template in _DDGS_QUERIES:
         query = template.format(artist=artist)
         try:
             with DDGS() as ddgs:
-                results = list(ddgs.images(
-                    query,
-                    max_results=15,
-                    size="Large",
-                    type_image="photo",
-                ))
+                results = list(ddgs.images(query, max_results=10))
             for r in results:
                 url = r.get("image", "")
                 if url.startswith("http"):
+                    log.info("DuckDuckGo'dan fotoğraf bulundu: %s", query)
                     return url
         except Exception as e:
-            log.warning("DuckDuckGo sorgusu başarısız (%s): %s", query, e)
+            log.debug("DuckDuckGo sorgusu başarısız (%s): %s", query, e)
             continue
     return None
 
@@ -68,13 +106,15 @@ def _download_and_resize(url: str) -> Image.Image | None:
 
 
 def find_artist_photo(artist: str) -> Image.Image | None:
-    url = _search_image_url(artist)
+    # Önce Wikipedia (güvenilir, rate limit yok)
+    url = _wikipedia_image_url(artist)
     if not url:
-        log.warning("'%s' için fotoğraf URL'i bulunamadı.", artist)
+        # Sonra DuckDuckGo
+        url = _ddgs_image_url(artist)
+    if not url:
+        log.warning("'%s' için hiçbir kaynaktan fotoğraf bulunamadı.", artist)
         return None
     img = _download_and_resize(url)
-    if img is None:
-        log.warning("'%s' fotoğrafı indirilemedi.", artist)
-    else:
+    if img:
         log.info("'%s' fotoğrafı başarıyla indirildi.", artist)
     return img
