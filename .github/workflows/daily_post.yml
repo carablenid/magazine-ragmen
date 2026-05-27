@@ -67,6 +67,14 @@ jobs:
           path: session.json
           key: instagram-session-v1
 
+      - name: Debug screenshots yükle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-debug-screenshots
+          path: /tmp/ig_debug/
+          if-no-files-found: ignore
+
       - name: Queue değişikliklerini commit et
         run: |
           git config user.name "MagazineRagmenBot"

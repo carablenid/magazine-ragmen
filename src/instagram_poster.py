@@ -7,6 +7,7 @@ from pathlib import Path
 log = logging.getLogger(__name__)
 
 SESSION_FILE = Path("playwright_session.json")
+SCREENSHOT_DIR = Path("/tmp/ig_debug")
 
 
 def _load_session_path() -> str:
@@ -24,6 +25,13 @@ def _load_session_path() -> str:
         "Instagram session bulunamadı. "
         "create_session.py çalıştırarak playwright_session.json oluştur."
     )
+
+
+def _shot(page, name: str):
+    SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    path = str(SCREENSHOT_DIR / f"{name}.png")
+    page.screenshot(path=path, full_page=False)
+    log.info("Screenshot: %s", path)
 
 
 def _click_first(page, selectors: list[str], timeout: int = 8000):
@@ -62,6 +70,7 @@ def post_photo(image_path: str, caption: str) -> str:
         log.info("Instagram ana sayfasına gidiliyor...")
         page.goto("https://www.instagram.com/", wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout(3000)
+        _shot(page, "01_homepage")
 
         if "accounts/login" in page.url:
             browser.close()
@@ -77,35 +86,37 @@ def post_photo(image_path: str, caption: str) -> str:
             'svg[aria-label="New post"]',
         ], timeout=10000)
         page.wait_for_timeout(2000)
+        _shot(page, "02_after_create_click")
 
         # Dosya seçici
         with page.expect_file_chooser(timeout=15000) as fc_info:
             _click_first(page, [
                 'button:has-text("Select from computer")',
                 '[role="button"]:has-text("Select from computer")',
-                'input[type="file"]',
             ], timeout=10000)
         fc_info.value.set_files(abs_path)
         log.info("Görsel yüklendi, crop ekranı bekleniyor...")
         page.wait_for_timeout(4000)
+        _shot(page, "03_after_file_upload")
 
         # Crop ekranı → Next
         _click_first(page, [
             'button:has-text("Next")',
             '[aria-label="Next"]',
             'div[role="dialog"] button:has-text("Next")',
-        ], timeout=30000)
+        ], timeout=15000)
         log.info("Crop Next tıklandı.")
         page.wait_for_timeout(2000)
+        _shot(page, "04_after_crop_next")
 
         # Filter ekranı → Next
         _click_first(page, [
             'button:has-text("Next")',
             '[aria-label="Next"]',
-            'div[role="dialog"] button:has-text("Next")',
         ], timeout=15000)
         log.info("Filter Next tıklandı.")
         page.wait_for_timeout(2000)
+        _shot(page, "05_after_filter_next")
 
         # Caption ekranı
         caption_sel = 'div[role="textbox"], textarea[placeholder], div[contenteditable="true"]'
@@ -113,15 +124,16 @@ def post_photo(image_path: str, caption: str) -> str:
         page.click(caption_sel)
         page.fill(caption_sel, caption)
         log.info("Caption girildi.")
+        _shot(page, "06_caption_filled")
 
         # Share
         _click_first(page, [
             'button:has-text("Share")',
             '[aria-label="Share"]',
-            'div[role="dialog"] button:has-text("Share")',
         ], timeout=15000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
         page.wait_for_timeout(6000)
+        _shot(page, "07_after_share")
         log.info("Post paylaşıldı!")
 
         browser.close()
