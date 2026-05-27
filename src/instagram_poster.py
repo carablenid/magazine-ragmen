@@ -14,7 +14,8 @@ def _load_session_path() -> str:
     """Session'ı geçici bir dosyaya yaz ve yolunu döndür."""
     b64 = os.environ.get("INSTAGRAM_PLAYWRIGHT_SESSION")
     if b64:
-        data = base64.b64decode(b64.strip())
+        b64 = b64.encode("ascii", errors="ignore").decode("ascii").strip()
+        data = base64.b64decode(b64)
         tmp = tempfile.NamedTemporaryFile(suffix=".json", delete=False, mode="wb")
         tmp.write(data)
         tmp.close()
