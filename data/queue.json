@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "cb6330e7-f016-5d01-a659-b9950d09ced7",
-      "artist": "Blok3",
-      "title": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı - Bursada Bugün",
-      "summary": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı  Bursada Bugün",
-      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWDJ3QzNMdGIxeWlSTGJKYWFpeEJPUWlwRnBUa3c1YnhzcWxIWm5XYjlQTDlyQzIzLVE1VXNaRXBfVFVic25DNXpfOFBiRDQ4ellKbmJOYjlfWVRQdmFfSEFmWW5PclBnVFdzZFdLNVowcEJOaUtjZDdIVmpmcmZ1Y1VBVTZ6a2tZR1B2UmI0bXdxQkpzbmswTl8yVFl6Tl9wTWU5VTVGTTltTWpHOE8xYU1LQ3dYV0ZKbEFHY2Q5WWlzTURkZGRJRzhlQdIBzgFBVV95cUxPOERmYThqZmtyT01kQ3ZWendDQVZRcVVtcXc4b3hKeFJaYkVVcXQ1bzRNeXh2bDVvVUJUMTgyM3NVZXN5cTR1T3RONUVMWVVDNjh4UG14QmxiUXFrOUlfeWNIRF8tQV9MUGFmNTZUaGE0bUR1ZHg4OVowRHBSbE1YS3NjLXhRUksxRmJnellseldvcGp4YVdpcU5pdTJNSDJoLUZCbUhaTGZQY044NjM3ZzB3cjF5Y1JJR2x6WWdzckx3OThTMFJxR3hxc0pIUQ?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:42.942031",
-      "published_at": "2026-05-22T10:53:00"
-    },
-    {
       "id": "07bf31ed-b752-545a-a968-f41355549c89",
       "artist": "Blok3",
       "title": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı? - Haberler",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:42.722552",
       "published_at": "2026-05-21T12:49:38"
+    },
+    {
+      "id": "cb6330e7-f016-5d01-a659-b9950d09ced7",
+      "artist": "Blok3",
+      "title": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı - Bursada Bugün",
+      "summary": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı  Bursada Bugün",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWDJ3QzNMdGIxeWlSTGJKYWFpeEJPUWlwRnBUa3c1YnhzcWxIWm5XYjlQTDlyQzIzLVE1VXNaRXBfVFVic25DNXpfOFBiRDQ4ellKbmJOYjlfWVRQdmFfSEFmWW5PclBnVFdzZFdLNVowcEJOaUtjZDdIVmpmcmZ1Y1VBVTZ6a2tZR1B2UmI0bXdxQkpzbmswTl8yVFl6Tl9wTWU5VTVGTTltTWpHOE8xYU1LQ3dYV0ZKbEFHY2Q5WWlzTURkZGRJRzhlQdIBzgFBVV95cUxPOERmYThqZmtyT01kQ3ZWendDQVZRcVVtcXc4b3hKeFJaYkVVcXQ1bzRNeXh2bDVvVUJUMTgyM3NVZXN5cTR1T3RONUVMWVVDNjh4UG14QmxiUXFrOUlfeWNIRF8tQV9MUGFmNTZUaGE0bUR1ZHg4OVowRHBSbE1YS3NjLXhRUksxRmJnellseldvcGp4YVdpcU5pdTJNSDJoLUZCbUhaTGZQY044NjM3ZzB3cjF5Y1JJR2x6WWdzckx3OThTMFJxR3hxc0pIUQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.942031",
+      "published_at": "2026-05-22T10:53:00"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T13:39:06.390977"
+  "last_scrape": "2026-05-27T13:49:07.277936"
 }
