@@ -1,5 +1,4 @@
 import os
-import re
 import logging
 from datetime import datetime, timedelta
 from urllib.parse import quote_plus
@@ -14,15 +13,22 @@ from src.queue_manager import make_item
 log = logging.getLogger(__name__)
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; MagazineRagmenBot/1.0)"
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "tr-TR,tr;q=0.9",
 }
 
 
-def _google_news_rss(query: str) -> list[dict]:
-    encoded = quote_plus(query)
-    url = f"https://news.google.com/rss/search?q={encoded}&hl=tr&gl=TR&ceid=TR:tr"
-    feed = feedparser.parse(url)
-    return feed.entries
+def _fetch_rss(url: str) -> feedparser.FeedParserDict:
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=10)
+        return feedparser.parse(r.content)
+    except Exception as e:
+        log.warning("RSS fetch hatası (%s): %s", url, e)
+        return feedparser.FeedParserDict(entries=[])
 
 
 def _entry_published(entry) -> datetime | None:
@@ -31,28 +37,29 @@ def _entry_published(entry) -> datetime | None:
     return None
 
 
-def _og_image(article_url: str) -> str | None:
+def _extract_image_from_summary(summary: str) -> str | None:
+    """Google News RSS summary'sindeki img tag'inden URL çek."""
     try:
-        r = requests.get(article_url, headers=HEADERS, timeout=8, allow_redirects=True)
-        soup = BeautifulSoup(r.text, "lxml")
-        tag = soup.find("meta", property="og:image")
-        if tag and tag.get("content"):
-            return tag["content"]
-        tag = soup.find("meta", attrs={"name": "twitter:image"})
-        if tag and tag.get("content"):
-            return tag["content"]
+        soup = BeautifulSoup(summary, "lxml")
+        img = soup.find("img")
+        if img and img.get("src"):
+            return img["src"]
     except Exception:
         pass
     return None
 
 
-def _resolve_google_url(entry_url: str) -> str:
-    """Google News URLs redirect to the actual article."""
+def _og_image(article_url: str) -> str | None:
     try:
-        r = requests.get(entry_url, headers=HEADERS, timeout=8, allow_redirects=True)
-        return r.url
+        r = requests.get(article_url, headers=HEADERS, timeout=6, allow_redirects=True)
+        soup = BeautifulSoup(r.text, "lxml")
+        for prop in ("og:image", "twitter:image"):
+            tag = soup.find("meta", property=prop) or soup.find("meta", attrs={"name": prop})
+            if tag and tag.get("content"):
+                return tag["content"]
     except Exception:
-        return entry_url
+        pass
+    return None
 
 
 def scrape_google_news() -> list[dict]:
@@ -61,25 +68,30 @@ def scrape_google_news() -> list[dict]:
 
     for artist in ARTISTS:
         query = ARTIST_SEARCH_TERMS.get(artist, artist)
-        try:
-            entries = _google_news_rss(query)
-        except Exception as e:
-            log.warning("RSS fetch failed for %s: %s", artist, e)
-            continue
+        encoded = quote_plus(query)
+        url = f"https://news.google.com/rss/search?q={encoded}&hl=tr&gl=TR&ceid=TR:tr"
+        feed = _fetch_rss(url)
 
-        for entry in entries:
+        log.info("  %s → %d entry", artist, len(feed.entries))
+
+        for entry in feed.entries:
             pub = _entry_published(entry)
             if pub and pub < cutoff:
                 continue
 
-            source_url = _resolve_google_url(entry.link)
-            image_url = _og_image(source_url)
+            # Önce summary'den resim çekmeyi dene (hızlı)
+            summary = getattr(entry, "summary", "") or ""
+            image_url = _extract_image_from_summary(summary)
+
+            # Yoksa article'a git (yavaş ama daha iyi)
+            if not image_url:
+                image_url = _og_image(entry.link)
 
             items.append(make_item(
                 artist=artist,
                 title=entry.title,
-                summary=getattr(entry, "summary", "")[:400],
-                source_url=source_url,
+                summary=BeautifulSoup(summary, "lxml").get_text()[:400],
+                source_url=entry.link,
                 image_url=image_url,
             ))
 
@@ -94,7 +106,6 @@ def scrape_youtube() -> list[dict]:
     try:
         from googleapiclient.discovery import build
     except ImportError:
-        log.warning("google-api-python-client not installed, skipping YouTube.")
         return []
 
     cutoff = datetime.utcnow() - timedelta(hours=MAX_NEWS_AGE_HOURS)
@@ -112,13 +123,14 @@ def scrape_youtube() -> list[dict]:
                 publishedAfter=cutoff.strftime("%Y-%m-%dT%H:%M:%SZ"),
             ).execute()
         except Exception as e:
-            log.warning("YouTube fetch failed for %s: %s", artist, e)
+            log.warning("YouTube hatası (%s): %s", artist, e)
             continue
 
         for v in resp.get("items", []):
             snippet = v["snippet"]
             video_id = v["id"]["videoId"]
-            thumb = snippet["thumbnails"].get("maxres") or snippet["thumbnails"].get("high", {})
+            thumb = (snippet["thumbnails"].get("maxres")
+                     or snippet["thumbnails"].get("high", {}))
             items.append(make_item(
                 artist=artist,
                 title=snippet["title"],
@@ -131,12 +143,12 @@ def scrape_youtube() -> list[dict]:
 
 
 def scrape_all() -> list[dict]:
-    log.info("Scraping Google News...")
+    log.info("Scraping Google News (%d sanatçı)...", len(ARTISTS))
     news = scrape_google_news()
-    log.info("Found %d news items.", len(news))
+    log.info("Toplam %d haber bulundu.", len(news))
 
-    log.info("Scraping YouTube...")
     yt = scrape_youtube()
-    log.info("Found %d YouTube items.", len(yt))
+    if yt:
+        log.info("%d YouTube haberi bulundu.", len(yt))
 
     return news + yt
