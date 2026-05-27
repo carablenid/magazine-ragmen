@@ -45,22 +45,26 @@ def _click_first(page, selectors: list[str], timeout: int = 8000):
     raise RuntimeError(f"Hiçbir selector bulunamadı: {selectors}")
 
 
-def _js_click_text_in_dialog(page, text: str) -> bool:
-    """Create new post dialog içinde exact text ile eşleşen ilk elemente JS click atar."""
-    return page.evaluate(f"""
+def _mouse_click_text_in_dialog(page, text: str) -> bool:
+    """Dialog içinde text ile eşleşen elementin koordinatına gerçek mouse click gönderir."""
+    coords = page.evaluate(f"""
         () => {{
             const dialog = document.querySelector('div[role="dialog"]');
-            if (!dialog) return false;
+            if (!dialog) return null;
             const all = dialog.querySelectorAll('*');
             for (const el of all) {{
                 if (el.textContent.trim() === '{text}' && el.offsetParent !== null) {{
-                    el.dispatchEvent(new MouseEvent('click', {{bubbles: true, cancelable: true}}));
-                    return true;
+                    const r = el.getBoundingClientRect();
+                    return {{x: r.left + r.width / 2, y: r.top + r.height / 2}};
                 }}
             }}
-            return false;
+            return null;
         }}
     """)
+    if coords:
+        page.mouse.click(coords["x"], coords["y"])
+        return True
+    return False
 
 
 def post_photo(image_path: str, caption: str) -> str:
@@ -152,12 +156,12 @@ def post_photo(image_path: str, caption: str) -> str:
         page.wait_for_timeout(1500)
         _shot(page, "06_caption_filled")
 
-        # Share — dialog içinde JS click (dialog dışındaki Share butonlarını atla)
+        # Share — dialog içinde elementin koordinatına gerçek mouse click
         log.info("Share tıklanıyor...")
-        clicked = _js_click_text_in_dialog(page, "Share")
+        clicked = _mouse_click_text_in_dialog(page, "Share")
         if not clicked:
-            # JS başarısız → Playwright locator ile dialog'a scope'la
-            page.locator('div[role="dialog"]').locator('text=Share').click(force=True, timeout=10000)
+            # Fallback: Playwright locator ile dialog'a scope'la
+            page.locator('div[role="dialog"]').get_by_text("Share", exact=True).click(force=True, timeout=10000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
         page.wait_for_timeout(7000)
         _shot(page, "07_after_share")
