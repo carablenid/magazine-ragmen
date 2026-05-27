@@ -29,7 +29,7 @@ POST_SCHEDULE_UTC = [
 ]
 
 POSTS_PER_DAY = 3
-MAX_NEWS_AGE_HOURS = 48
+MAX_NEWS_AGE_HOURS = 720  # 30 gün — tekrar post önleme posted history ile yapılıyor
 QUEUE_MAX_AGE_DAYS = 7
 
 IMAGE_SIZE = (1080, 1080)

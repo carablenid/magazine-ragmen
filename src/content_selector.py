@@ -16,10 +16,11 @@ def _score(item: dict) -> int:
     for keyword, weight in PRIORITY_KEYWORDS.items():
         if keyword in text:
             score += weight
-    # Recency bonus: newer = higher
+    # Recency bonus: yayın tarihi varsa onu, yoksa scrape tarihini kullan
     try:
-        age_hours = (datetime.utcnow() - datetime.fromisoformat(item["scraped_at"])).total_seconds() / 3600
-        score += max(0, 24 - age_hours)
+        ref_date = item.get("published_at") or item["scraped_at"]
+        age_hours = (datetime.utcnow() - datetime.fromisoformat(ref_date)).total_seconds() / 3600
+        score += max(0, 168 - age_hours)  # 7 gün içindeyse bonus
     except Exception:
         pass
     # Prefer items with an image

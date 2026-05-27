@@ -87,13 +87,17 @@ def scrape_google_news() -> list[dict]:
             if not image_url:
                 image_url = _og_image(entry.link)
 
-            items.append(make_item(
+            pub = _entry_published(entry)
+            item = make_item(
                 artist=artist,
                 title=entry.title,
                 summary=BeautifulSoup(summary, "lxml").get_text()[:400],
                 source_url=entry.link,
                 image_url=image_url,
-            ))
+            )
+            if pub:
+                item["published_at"] = pub.isoformat()
+            items.append(item)
 
     return items
 
