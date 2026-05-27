@@ -74,8 +74,8 @@ def run():
         mark_as_posted([item])
         log.info("=== Başarıyla tamamlandı. ===")
     except Exception as e:
-        log.error("Post gönderilemedi: %s", e)
-        # item'ı kuyruğa geri koy
+        import traceback
+        log.error("Post gönderilemedi: %s\n%s", e, traceback.format_exc())
         add_items([item])
 
 
