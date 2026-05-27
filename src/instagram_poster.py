@@ -128,10 +128,10 @@ def post_photo(image_path: str, caption: str) -> str:
         # keyboard.type ile yaz — fill() Instagram JS eventlarını tetiklemiyor
         page.keyboard.type(caption)
         log.info("Caption girildi.")
-        page.wait_for_timeout(3000)
+        # Hashtag autocomplete dropdown'ını kapat
+        page.keyboard.press("Escape")
+        page.wait_for_timeout(2000)
         _shot(page, "06_caption_filled")
-
-        # Share (Instagram header'da text link, button değil)
         _shot(page, "06b_before_share")
         _click_first(page, [
             'text=Share',
