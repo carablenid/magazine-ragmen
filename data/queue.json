@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "6f528dff-9da3-5608-98e9-e4da3649b28d",
-      "artist": "Motive",
-      "title": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti - Yeni Birlik Gazetesi",
-      "summary": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti  Yeni Birlik Gazetesi",
-      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd24tRXhZWUhMYVpvUHNKZ0cxMjR4dEN6Mi05cnl6bFhFZ1FsQ1pSVTA0N24wUW8xTmRPdFI3NjBUN0V4YjVGVjhVWmV2Y2NaTXcxcWl2WEJTUl9BNE44cU90ZVBkQUc0djdwX0tSNWotbEZ3MWRYVm1FRl80SFZ2UXhkcmtLR3NqUWl1RWFTSVJ0NVVYSUxzY1FMSkxXdkdjTVExRDRQU2pkbVFTR1QwR2Rqaw?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:47.015802",
-      "published_at": "2026-05-21T19:46:59"
-    },
-    {
       "id": "c36e7d0b-879e-53c3-aba8-c7aff816d7e7",
       "artist": "Uzi",
       "title": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler… - dokuz8HABER",
@@ -237,6 +227,17 @@
       "scraped_at": "2026-05-27T13:28:46.835310",
       "published_at": "2026-05-19T20:32:00",
       "posted_at": "2026-05-27T15:19:50.826686"
+    },
+    {
+      "id": "6f528dff-9da3-5608-98e9-e4da3649b28d",
+      "artist": "Motive",
+      "title": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti - Yeni Birlik Gazetesi",
+      "summary": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti  Yeni Birlik Gazetesi",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd24tRXhZWUhMYVpvUHNKZ0cxMjR4dEN6Mi05cnl6bFhFZ1FsQ1pSVTA0N24wUW8xTmRPdFI3NjBUN0V4YjVGVjhVWmV2Y2NaTXcxcWl2WEJTUl9BNE44cU90ZVBkQUc0djdwX0tSNWotbEZ3MWRYVm1FRl80SFZ2UXhkcmtLR3NqUWl1RWFTSVJ0NVVYSUxzY1FMSkxXdkdjTVExRDRQU2pkbVFTR1QwR2Rqaw?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:47.015802",
+      "published_at": "2026-05-21T19:46:59",
+      "posted_at": "2026-05-27T15:36:57.712464"
     }
   ],
   "last_scrape": "2026-05-27T14:37:26.222890"
