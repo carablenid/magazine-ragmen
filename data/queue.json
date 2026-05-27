@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "27b98b58-4710-5318-a184-a7b8fa31e851",
-      "artist": "Blok3",
-      "title": "Blok3 Davasında Yeni Gelişme! 10 Milyon TL Şantaj İddiası: 'Parayı Verin Adını Silelim' - CNN Türk",
-      "summary": "Blok3 Davasında Yeni Gelişme! 10 Milyon TL Şantaj İddiası: 'Parayı Verin Adını Silelim'  CNN Türk",
-      "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNU1KbTA2Q2xZMnI1b1NiQWlTbTcyTHJLMmdCeEJjdkZxX2diS01lc2lYU0RqUUxoeU5WRDZDbnhjLVdXVU9fQnVWSnE2b1Qwd3RKYjlOSll6SWFsYkJTZHA2SEdMeFRuOW9WQ3B1MklXYVN1RWRrZFE5UHVHQzNsNkxROFN3LXhHTmNVN0FuTi1MQ0tzZU9KYVhBeWlRajBnbzJGdHNQZmZXVmZaY1pBdElMUUVSN3Q5bkhzLVFhM0Z1NHJNSU1IdGx3?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:44.963795",
-      "published_at": "2026-05-17T07:00:00"
-    },
-    {
       "id": "3a7b5819-1ed5-5e5a-99d1-180d41c53d8e",
       "artist": "Blok3",
       "title": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama - Yeniçağ Gazetesi",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:44.751917",
       "published_at": "2026-05-21T05:49:52"
+    },
+    {
+      "id": "27b98b58-4710-5318-a184-a7b8fa31e851",
+      "artist": "Blok3",
+      "title": "Blok3 Davasında Yeni Gelişme! 10 Milyon TL Şantaj İddiası: 'Parayı Verin Adını Silelim' - CNN Türk",
+      "summary": "Blok3 Davasında Yeni Gelişme! 10 Milyon TL Şantaj İddiası: 'Parayı Verin Adını Silelim'  CNN Türk",
+      "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNU1KbTA2Q2xZMnI1b1NiQWlTbTcyTHJLMmdCeEJjdkZxX2diS01lc2lYU0RqUUxoeU5WRDZDbnhjLVdXVU9fQnVWSnE2b1Qwd3RKYjlOSll6SWFsYkJTZHA2SEdMeFRuOW9WQ3B1MklXYVN1RWRrZFE5UHVHQzNsNkxROFN3LXhHTmNVN0FuTi1MQ0tzZU9KYVhBeWlRajBnbzJGdHNQZmZXVmZaY1pBdElMUUVSN3Q5bkhzLVFhM0Z1NHJNSU1IdGx3?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.963795",
+      "published_at": "2026-05-17T07:00:00"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T14:32:59.365247"
+  "last_scrape": "2026-05-27T14:37:26.222890"
 }
