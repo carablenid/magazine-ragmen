@@ -10,14 +10,17 @@ log = logging.getLogger(__name__)
 SESSION_FILE = Path("playwright_session.json")
 
 
-def _load_session() -> dict:
-    # GitHub Actions: base64 encoded secret
+def _load_session_path() -> str:
+    """Session'ı geçici bir dosyaya yaz ve yolunu döndür."""
     b64 = os.environ.get("INSTAGRAM_PLAYWRIGHT_SESSION")
     if b64:
-        return json.loads(base64.b64decode(b64).decode())
-    # Lokal: dosyadan
+        data = base64.b64decode(b64.strip())
+        tmp = tempfile.NamedTemporaryFile(suffix=".json", delete=False, mode="wb")
+        tmp.write(data)
+        tmp.close()
+        return tmp.name
     if SESSION_FILE.exists():
-        return json.loads(SESSION_FILE.read_text(encoding="utf-8"))
+        return str(SESSION_FILE.resolve())
     raise RuntimeError(
         "Instagram session bulunamadı. "
         "create_session.py çalıştırarak playwright_session.json oluştur."
@@ -27,7 +30,7 @@ def _load_session() -> dict:
 def post_photo(image_path: str, caption: str) -> str:
     from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
-    session = _load_session()
+    session_path = _load_session_path()
     abs_path = str(Path(image_path).resolve())
 
     with sync_playwright() as p:
@@ -36,7 +39,7 @@ def post_photo(image_path: str, caption: str) -> str:
             args=["--no-sandbox", "--disable-dev-shm-usage"],
         )
         ctx = browser.new_context(
-            storage_state=session,
+            storage_state=session_path,
             viewport={"width": 1280, "height": 900},
             user_agent=(
                 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
