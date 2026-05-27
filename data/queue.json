@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "c36e7d0b-879e-53c3-aba8-c7aff816d7e7",
-      "artist": "Uzi",
-      "title": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler… - dokuz8HABER",
-      "summary": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler…  dokuz8HABER",
-      "source_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1HN25GdEhOZk83THZLNTByVUhFVms2V0hYai1EUXZqOU9odFBnWWpORHlNandZVEpYSXlabkpwMGhJR1hwVHpFWVB4SQ?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:47.798703",
-      "published_at": "2026-05-14T16:31:02"
-    },
-    {
       "id": "3238ba45-2fd1-5413-bb66-0318fe2f3fb5",
       "artist": "Ezhel",
       "title": "Killa Hakan feat. Ceza & Ezhel & Ben Fero: Fight Kulüp (2019) - IMDb",
@@ -238,6 +228,17 @@
       "scraped_at": "2026-05-27T13:28:47.015802",
       "published_at": "2026-05-21T19:46:59",
       "posted_at": "2026-05-27T15:36:57.712464"
+    },
+    {
+      "id": "c36e7d0b-879e-53c3-aba8-c7aff816d7e7",
+      "artist": "Uzi",
+      "title": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler… - dokuz8HABER",
+      "summary": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler…  dokuz8HABER",
+      "source_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1HN25GdEhOZk83THZLNTByVUhFVms2V0hYai1EUXZqOU9odFBnWWpORHlNandZVEpYSXlabkpwMGhJR1hwVHpFWVB4SQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:47.798703",
+      "published_at": "2026-05-14T16:31:02",
+      "posted_at": "2026-05-27T15:39:36.739854"
     }
   ],
   "last_scrape": "2026-05-27T14:37:26.222890"
