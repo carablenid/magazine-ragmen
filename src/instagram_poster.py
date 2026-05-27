@@ -54,7 +54,7 @@ def _js_click_text(page, text: str) -> bool:
                 if (el.children.length === 0 &&
                     el.textContent.trim() === '{text}' &&
                     el.offsetParent !== null) {{
-                    el.click();
+                    el.dispatchEvent(new MouseEvent('click', {{bubbles: true, cancelable: true}}));
                     return true;
                 }}
             }}
