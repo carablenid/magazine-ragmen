@@ -51,7 +51,7 @@ def post_photo(image_path: str, caption: str) -> str:
         page = ctx.new_page()
 
         log.info("Instagram ana sayfasına gidiliyor...")
-        page.goto("https://www.instagram.com/", wait_until="networkidle", timeout=30000)
+        page.goto("https://www.instagram.com/", wait_until="domcontentloaded", timeout=60000)
 
         if "accounts/login" in page.url:
             browser.close()
