@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "41742d9f-00fb-5f38-ab3f-1300216e21d4",
-      "artist": "Blok3",
-      "title": "Blok3 gözaltına mı alındı? Blok3 neden gözaltına alındı, gerçek adı ne, Hakan Aydın kimdir, kaç yaşında? - Afyon Ana Haber",
-      "summary": "Blok3 gözaltına mı alındı? Blok3 neden gözaltına alındı, gerçek adı ne, Hakan Aydın kimdir, kaç yaşında?  Afyon Ana Haber",
-      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOUpKZ0VOVFNUNXNsdFRwVEltZ2hDSW1CSlZnUnpUU05TRU81YzktUnlRbEJvODhfUFIxZ1cwMUFPN0E5eTUtUTRHWGFnQnVBcWtqeUVKQm13dTNsVGk2OUdTLWJOcXlhS2RBNWxXdHpPLTM5bk9lNHo5TGZHTXNvZ2Z2eDZ4Z1FkWHU2eHZQVlAyRF9sQjEwaUdsMG1Jb1N3WFJrSWVDWGdaaEhibVg5LVV1ZGZ3WWNiV0lkeGRpaDk1dkJabU5sWG55ZHTSAdIBQVVfeXFMT01aVU5hU3ctRUdNWGJ0Y2hmTmxRemNmYjA1MDhvMEV6WlFuVFhsRXFrRG0wNGJSd0lwSTQ5aFJpMXVLLVhqamdad254YUotM1VRd1o5X2MteFgxUXI1aHo2QVJrMjhMdUFBaDJBU05NRkNlT1JUOUphTTRFa0ZITXZ6ZEFUYWN5SDdQSUNZWlBWaFlaVVJSZ0F3UGtqZ3ZFWVl2ME1YZ0JvQ0lxTDAtMDIxYmJhdXVIbm14VkZsQmh1VVNrbUZJcDFMbUNwRTEzLUpR?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:43.872070",
-      "published_at": "2026-05-21T06:15:00"
-    },
-    {
       "id": "89fa873c-a062-5c59-914c-b7ff0bfa12a1",
       "artist": "Blok3",
       "title": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma - Memurlar.Net",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:43.684128",
       "published_at": "2026-05-17T06:15:06"
+    },
+    {
+      "id": "41742d9f-00fb-5f38-ab3f-1300216e21d4",
+      "artist": "Blok3",
+      "title": "Blok3 gözaltına mı alındı? Blok3 neden gözaltına alındı, gerçek adı ne, Hakan Aydın kimdir, kaç yaşında? - Afyon Ana Haber",
+      "summary": "Blok3 gözaltına mı alındı? Blok3 neden gözaltına alındı, gerçek adı ne, Hakan Aydın kimdir, kaç yaşında?  Afyon Ana Haber",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOUpKZ0VOVFNUNXNsdFRwVEltZ2hDSW1CSlZnUnpUU05TRU81YzktUnlRbEJvODhfUFIxZ1cwMUFPN0E5eTUtUTRHWGFnQnVBcWtqeUVKQm13dTNsVGk2OUdTLWJOcXlhS2RBNWxXdHpPLTM5bk9lNHo5TGZHTXNvZ2Z2eDZ4Z1FkWHU2eHZQVlAyRF9sQjEwaUdsMG1Jb1N3WFJrSWVDWGdaaEhibVg5LVV1ZGZ3WWNiV0lkeGRpaDk1dkJabU5sWG55ZHTSAdIBQVVfeXFMT01aVU5hU3ctRUdNWGJ0Y2hmTmxRemNmYjA1MDhvMEV6WlFuVFhsRXFrRG0wNGJSd0lwSTQ5aFJpMXVLLVhqamdad254YUotM1VRd1o5X2MteFgxUXI1aHo2QVJrMjhMdUFBaDJBU05NRkNlT1JUOUphTTRFa0ZITXZ6ZEFUYWN5SDdQSUNZWlBWaFlaVVJSZ0F3UGtqZ3ZFWVl2ME1YZ0JvQ0lxTDAtMDIxYmJhdXVIbm14VkZsQmh1VVNrbUZJcDFMbUNwRTEzLUpR?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.872070",
+      "published_at": "2026-05-21T06:15:00"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T14:09:35.385992"
+  "last_scrape": "2026-05-27T14:11:59.618512"
 }
