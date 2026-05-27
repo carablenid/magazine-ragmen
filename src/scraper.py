@@ -23,11 +23,25 @@ HEADERS = {
 
 
 def _fetch_rss(url: str) -> feedparser.FeedParserDict:
+    # Önce requests ile dene (daha iyi header kontrolü)
     try:
-        r = requests.get(url, headers=HEADERS, timeout=10)
-        return feedparser.parse(r.content)
+        r = requests.get(url, headers={**HEADERS, "Accept": "application/rss+xml,application/xml,*/*"}, timeout=12)
+        if r.status_code == 200 and len(r.content) > 500:
+            feed = feedparser.parse(r.content)
+            if feed.entries:
+                return feed
+            log.debug("requests ile boş feed, feedparser fallback deneniyor.")
+        else:
+            log.warning("RSS HTTP %s (%d byte), fallback deneniyor.", r.status_code, len(r.content))
     except Exception as e:
-        log.warning("RSS fetch hatası (%s): %s", url, e)
+        log.warning("RSS requests hatası: %s", e)
+
+    # Fallback: feedparser doğrudan URL çeksin
+    try:
+        feed = feedparser.parse(url)
+        return feed
+    except Exception as e:
+        log.warning("RSS feedparser hatası: %s", e)
         return feedparser.FeedParserDict(entries=[])
 
 
