@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "96b99d16-fd0f-5639-97d8-d78c7e954968",
-      "artist": "Motive",
-      "title": "19 Mayıs Kutlamasında Motive Rüzgarı - Aydın Times",
-      "summary": "19 Mayıs Kutlamasında Motive Rüzgarı  Aydın Times",
-      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fLXlLc3ZERVdhOTBwTEJEZnNDQnhIcXdKRzk3VEpiNGhlUUdTaVlUMWhQYTB2b2dfOTJfOXFKTk1tMEhtcTZIMnZlYVJKcUNfVFhMMEMtNkU5R0lJR042OGh3OVpPVURWQ2llY2RIWFLSAXZBVV95cUxPT1V4bVFDaGkzcDRMY2YyNm8xYmo2WGxNMl91N241a2VkRV93LUVrOXFBX2ZVaWJXa0R1b2hhT3NFdGRnbXA5Y01ZOS0yZ2FrdjgxWEdabXhsM011UmYzTmpHMF90MWZ2V3dLSXhLMVBfZGZqRFR3?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:46.835310",
-      "published_at": "2026-05-19T20:32:00"
-    },
-    {
       "id": "6f528dff-9da3-5608-98e9-e4da3649b28d",
       "artist": "Motive",
       "title": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti - Yeni Birlik Gazetesi",
@@ -236,6 +226,17 @@
       "scraped_at": "2026-05-27T13:28:46.652839",
       "published_at": "2026-05-22T12:29:06",
       "posted_at": "2026-05-27T15:13:54.720350"
+    },
+    {
+      "id": "96b99d16-fd0f-5639-97d8-d78c7e954968",
+      "artist": "Motive",
+      "title": "19 Mayıs Kutlamasında Motive Rüzgarı - Aydın Times",
+      "summary": "19 Mayıs Kutlamasında Motive Rüzgarı  Aydın Times",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fLXlLc3ZERVdhOTBwTEJEZnNDQnhIcXdKRzk3VEpiNGhlUUdTaVlUMWhQYTB2b2dfOTJfOXFKTk1tMEhtcTZIMnZlYVJKcUNfVFhMMEMtNkU5R0lJR042OGh3OVpPVURWQ2llY2RIWFLSAXZBVV95cUxPT1V4bVFDaGkzcDRMY2YyNm8xYmo2WGxNMl91N241a2VkRV93LUVrOXFBX2ZVaWJXa0R1b2hhT3NFdGRnbXA5Y01ZOS0yZ2FrdjgxWEdabXhsM011UmYzTmpHMF90MWZ2V3dLSXhLMVBfZGZqRFR3?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:46.835310",
+      "published_at": "2026-05-19T20:32:00",
+      "posted_at": "2026-05-27T15:19:50.826686"
     }
   ],
   "last_scrape": "2026-05-27T14:37:26.222890"
