@@ -99,11 +99,12 @@ def post_photo(image_path: str, caption: str) -> str:
         page.wait_for_timeout(4000)
         _shot(page, "03_after_file_upload")
 
-        # Crop ekranı → Next
+        # Crop ekranı → Next (Instagram header'daki Next bir div/span, button değil)
         _click_first(page, [
+            'text=Next',
+            '[role="button"]:has-text("Next")',
+            'span:has-text("Next")',
             'button:has-text("Next")',
-            '[aria-label="Next"]',
-            'div[role="dialog"] button:has-text("Next")',
         ], timeout=15000)
         log.info("Crop Next tıklandı.")
         page.wait_for_timeout(2000)
@@ -111,8 +112,10 @@ def post_photo(image_path: str, caption: str) -> str:
 
         # Filter ekranı → Next
         _click_first(page, [
+            'text=Next',
+            '[role="button"]:has-text("Next")',
+            'span:has-text("Next")',
             'button:has-text("Next")',
-            '[aria-label="Next"]',
         ], timeout=15000)
         log.info("Filter Next tıklandı.")
         page.wait_for_timeout(2000)
@@ -128,8 +131,9 @@ def post_photo(image_path: str, caption: str) -> str:
 
         # Share
         _click_first(page, [
+            'text=Share',
+            '[role="button"]:has-text("Share")',
             'button:has-text("Share")',
-            '[aria-label="Share"]',
         ], timeout=15000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
         page.wait_for_timeout(6000)
