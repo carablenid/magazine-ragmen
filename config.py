@@ -8,6 +8,19 @@ YOUTUBE_CHANNELS: dict[str, str] = {
     # "UCxxxxxxxxxxxxxxxx": "Blok3",
 }
 
+# Sanatçı fotoğrafı için özel arama terimleri — Türk rapper bağlamı şart
+# "Uzi" tek başına silah/Lil Uzi Vert çıkarır, bu yüzden spesifik yazılmalı
+ARTIST_PHOTO_TERMS = {
+    "Blok3":       "Blok3 türk rapper sahne",
+    "Ati242":      "Ati242 türk rapper",
+    "Motive":      "Motive türkçe rap müzisyen",
+    "Uzi":         "Uzi türkçe rap sanatçısı türkiye",
+    "Şehinşah":    "Şehinşah türk rapper müzisyen",
+    "Ezhel":       "Ezhel türk rapper",
+    "Joker":       "Joker türkçe rap",
+    "Deathbycamp": "Deathbycamp türk rapper",
+}
+
 # Her sanatçı için Google News arama eki
 ARTIST_SEARCH_TERMS = {
     "Blok3": "Blok3 rap",
@@ -29,7 +42,7 @@ POST_SCHEDULE_UTC = [
 ]
 
 POSTS_PER_DAY = 3
-MAX_NEWS_AGE_HOURS = 360  # 15 gün — tekrar post önleme posted history ile yapılıyor
+MAX_NEWS_AGE_HOURS = 168  # 7 gün — scraper filtresi; validator 7 gün üstünü kesinlikle reddeder
 QUEUE_MAX_AGE_DAYS = 7
 
 IMAGE_SIZE = (1080, 1080)

@@ -4,7 +4,7 @@ import logging
 import requests
 from PIL import Image
 
-from config import IMAGE_SIZE
+from config import IMAGE_SIZE, ARTIST_PHOTO_TERMS
 
 log = logging.getLogger(__name__)
 
@@ -15,13 +15,6 @@ HEADERS = {
         "Chrome/124.0.0.0 Safari/537.36"
     )
 }
-
-_DDGS_QUERIES = [
-    "{artist} rapper türkiye",
-    "{artist} müzisyen",
-    "{artist} türkçe rap",
-    "{artist}",
-]
 
 _WIKI_VARIANTS = [
     "{artist}",
@@ -73,8 +66,16 @@ def _ddgs_image_url(artist: str) -> str | None:
             log.warning("ddgs paketi yüklü değil.")
             return None
 
-    for template in _DDGS_QUERIES:
-        query = template.format(artist=artist)
+    # Sanatçıya özel terim varsa önce onu kullan (yanlış kişi/nesne çıkmasın)
+    specific = ARTIST_PHOTO_TERMS.get(artist)
+    queries = [specific] if specific else []
+    queries += [
+        f"{artist} türk rapper sahne",
+        f"{artist} türkçe rap",
+        artist,
+    ]
+
+    for query in queries:
         try:
             with DDGS() as ddgs:
                 results = list(ddgs.images(query, max_results=10))

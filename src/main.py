@@ -15,6 +15,7 @@ from src.queue_manager import (
     add_items, queue_size, pop_items, mark_as_posted, clean_old_items
 )
 from src.vault_logger import log_post
+from src.post_validator import validate_item, validate_caption
 
 logging.basicConfig(
     level=logging.INFO,
@@ -36,18 +37,38 @@ def run():
         added = add_items(fresh)
         log.info("%d yeni haber kuyruğa eklendi.", added)
 
-    # Bu çalışmada 1 post at
-    items = pop_items(1)
+    # Bu çalışmada 1 post at — altın kural validasyonu geçmesi şart
+    items = pop_items(5)  # birden fazla çek, geçemeyen atlanacak
     if not items:
         log.warning("Yayınlanacak haber yok. Çalışma bitti.")
         return
 
-    item = items[0]
+    item = None
+    for candidate in items:
+        ok, reason = validate_item(candidate)
+        if ok:
+            item = candidate
+            # Kullanılmayanları geri koy
+            unused = [c for c in items if c["id"] != candidate["id"]]
+            if unused:
+                add_items(unused)
+            break
+        else:
+            log.warning("ALTIN KURAL — item reddedildi: %s | Sebep: %s", candidate["title"][:60], reason)
+
+    if item is None:
+        log.warning("Kuyruktan geçen içerik yok. Çalışma bitti.")
+        return
+
     log.info("İşleniyor: %s — %s", item["artist"], item["title"])
 
     # Caption
     try:
         caption = generate_caption(item)
+        ok, reason = validate_caption(caption)
+        if not ok:
+            log.warning("ALTIN KURAL — caption reddedildi: %s", reason)
+            caption = f"{item['artist'].upper()} — {item['title'][:120]}\n\n#magazineragmen #türkçerap"
     except Exception as e:
         log.error("Caption üretilemedi: %s", e)
         caption = f"{item['title']}\n\n#magazineragmen #türkçerap"
