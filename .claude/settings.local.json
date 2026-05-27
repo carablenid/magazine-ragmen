@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\tumer\\\\Documents\\\\Obsidian\\\\InstaProject\")",
+      "Bash(Out-Null)",
+      "Read(//c/Users/tumer/Documents/Obsidian/**)",
+      "PowerShell(New-Item *)",
+      "PowerShell(gh *)",
+      "PowerShell(winget install *)"
+    ]
+  }
+}

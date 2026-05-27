@@ -1,0 +1,72 @@
+name: Daily Instagram Post
+
+on:
+  schedule:
+    - cron: "30 6 * * *"   # 09:30 Türkiye (UTC+3)
+    - cron: "0 10 * * *"   # 13:00 Türkiye
+    - cron: "0 16 * * *"   # 19:00 Türkiye
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (post atma, sadece test)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Bağımlılıkları yükle
+        run: pip install -r requirements.txt
+
+      - name: Font indir (Montserrat)
+        run: |
+          mkdir -p assets/fonts
+          curl -sL "https://github.com/JulietaUla/Montserrat/raw/master/fonts/ttf/Montserrat-Bold.ttf" \
+            -o assets/fonts/Montserrat-Bold.ttf
+          curl -sL "https://github.com/JulietaUla/Montserrat/raw/master/fonts/ttf/Montserrat-Regular.ttf" \
+            -o assets/fonts/Montserrat-Regular.ttf
+
+      - name: Instagram session yükle
+        uses: actions/cache@v4
+        with:
+          path: session.json
+          key: instagram-session-v1
+
+      - name: Postu oluştur ve yayınla
+        env:
+          INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: python -m src.main
+
+      - name: Instagram session kaydet
+        uses: actions/cache@v4
+        with:
+          path: session.json
+          key: instagram-session-v1
+
+      - name: Queue değişikliklerini commit et
+        run: |
+          git config user.name "MagazineRagmenBot"
+          git config user.email "carablenid@gmail.com"
+          git add data/queue.json
+          git diff --staged --quiet || git commit -m "chore: queue güncelle [$(date -u +%Y-%m-%dT%H:%M)]"
+          git push
