@@ -1,5 +1,238 @@
 {
-  "queue": [],
-  "posted": [],
-  "last_scrape": "2026-05-27T13:26:05.580134"
+  "queue": [
+    {
+      "id": "640b0830-84da-54b5-8cb0-202678c42550",
+      "artist": "Blok3",
+      "title": "Blok3 neden gözaltına alındı, gerçek adı ne, kaç yaşında? - Kanal 3 Tv",
+      "summary": "Blok3 neden gözaltına alındı, gerçek adı ne, kaç yaşında?  Kanal 3 Tv",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRktCZmU0Nm5FN1JsY2NEZHdWcHVHczU0aVpZVnJzT3FUTDlSbmRWZTdyazZGOUp5QlM3UUdVTUI5ckNqVnI4bTVZdFlibHRaTUJFOWNLM3AzOWJsekhQeW5PeXJYRmxnUl9BTkJRNWZuM1hVZkV5X0FzSkZLRGs1dHNjVjVHbC1D?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.538762",
+      "published_at": "2026-05-21T07:07:17"
+    },
+    {
+      "id": "f5a2c63f-9ef1-5d0b-be0d-6251a5a8a55b",
+      "artist": "Blok3",
+      "title": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş” - Gazete3",
+      "summary": "Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş”  Gazete3",
+      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRU9DX21hZjdvWGNJU3hsOVJDeXNPODNHNU9VTkQyWUhvaEdYVmdCeU5HTEJmMlJFbWJTQlhXdGt3LTRpanpieXFEYlJmQU1SdHBhd3h0Z001Q1hMZHNfc28tRVRJRWFvZFhGaHlpRkRBREkteEhrOVNiZXhOLTRhRndKVkZBcUhtMl9PZA?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.722552",
+      "published_at": "2026-05-21T12:49:38"
+    },
+    {
+      "id": "cb6330e7-f016-5d01-a659-b9950d09ced7",
+      "artist": "Blok3",
+      "title": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı - Bursada Bugün",
+      "summary": "Blok3 hakkındaki soruşturmada yeni gelişme! Adli kontrol kararıyla serbest bırakıldı  Bursada Bugün",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWDJ3QzNMdGIxeWlSTGJKYWFpeEJPUWlwRnBUa3c1YnhzcWxIWm5XYjlQTDlyQzIzLVE1VXNaRXBfVFVic25DNXpfOFBiRDQ4ellKbmJOYjlfWVRQdmFfSEFmWW5PclBnVFdzZFdLNVowcEJOaUtjZDdIVmpmcmZ1Y1VBVTZ6a2tZR1B2UmI0bXdxQkpzbmswTl8yVFl6Tl9wTWU5VTVGTTltTWpHOE8xYU1LQ3dYV0ZKbEFHY2Q5WWlzTURkZGRJRzhlQdIBzgFBVV95cUxPOERmYThqZmtyT01kQ3ZWendDQVZRcVVtcXc4b3hKeFJaYkVVcXQ1bzRNeXh2bDVvVUJUMTgyM3NVZXN5cTR1T3RONUVMWVVDNjh4UG14QmxiUXFrOUlfeWNIRF8tQV9MUGFmNTZUaGE0bUR1ZHg4OVowRHBSbE1YS3NjLXhRUksxRmJnellseldvcGp4YVdpcU5pdTJNSDJoLUZCbUhaTGZQY044NjM3ZzB3cjF5Y1JJR2x6WWdzckx3OThTMFJxR3hxc0pIUQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.942031",
+      "published_at": "2026-05-22T10:53:00"
+    },
+    {
+      "id": "07bf31ed-b752-545a-a968-f41355549c89",
+      "artist": "Blok3",
+      "title": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı? - Haberler",
+      "summary": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?  Haberler",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNakt0SEZWY1dKc3UxaWE2WW82dTJrTWFQZEY4d3BsWDJQTzNmOEhFRmgwWnZWbEdaZENYZXBRcVNrekpPM0o3QWQ1SngwSkYxUzBXOW5IdXpUdzdFMFVqMl9hX2I2UW94NTQ2T3BvUFZISlFlRnVzb1c1OGpUWEZmSzJ0aXdtdHBBTlRwUGJ6NE1pUWRHNVBLcmtLYS04QdIBmwFBVV95cUxPZkIwUXRYZm5SUXZLbXFFRTlrZ3k3Y21RQzI4WkZoUV8zWE4tbm8tSzFhUFpvUmJQWDQ0YnV6TEV6YkJvM19mODVQRUU4TFc3aHN5MlhzUlVSLW9sWktuNUNvY0JydGtiOVZ0SndVMmM1OFhGVTFDal9LVWxmcmo3OXJCY3F2QzBEclhHdkNlaTVXaTFTX0taUzFJcw?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.110990",
+      "published_at": "2026-05-21T12:23:15"
+    },
+    {
+      "id": "3c0e16e0-9714-53c1-a39a-6cd0731b43ca",
+      "artist": "Blok3",
+      "title": "BLOK3’ün “La Catedral” gecesi yok satıyor - Haberton",
+      "summary": "BLOK3’ün “La Catedral” gecesi yok satıyor  Haberton",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3dEt0cjhZUVAydUd5Z2IxcjhFbGxfdDE4SFB6TEdaSmxlNjVDWlhGNUpWMkhzc1UtdHJnc01QOTBaX0d3azNoLVczNkJWU2N5MldxUHROdTNMa3ZtM2RVNUV2d21mOXBfZTJpOA?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.291129",
+      "published_at": "2026-05-21T07:25:47"
+    },
+    {
+      "id": "fb134f0c-46ac-5a17-8443-8899fb656a8c",
+      "artist": "Blok3",
+      "title": "Festival skandalında ters köşe: Blok3 davasından 10 milyon TL’lik şantaj çıktı! - Sabah",
+      "summary": "Festival skandalında ters köşe: Blok3 davasından 10 milyon TL’lik şantaj çıktı!  Sabah",
+      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOR085VnlFZ09xcnc0elVPaG5FWDREVUFpbkpTTUJ6VGVlSFI0OW5SSG9zZFlSZXFTbGd5aFBiOHVyUlVlZk9qMXZidzNfelRhQTBjdVF1RlhMbF9Gbm1RV0taalZULW1vZTN6bHR3Tl93QXplcmdrTElmUEhuX3pqaGhGbk9TczVuSzVtMFBsaHhxQXBKaDVzTzB2S3duZ2oteFNrekc0NERSSkhQLUJCZklUNXNjNGhzNzZ6R2IzV2xuYzQ3UkxINWxURzF6YmdQN0440gHWAUFVX3lxTE5oWDV5ZDhIcTBGeW10MzJjY05Lc0ZoeENOWlE1aUpnQTFBWmg2TFA3MFZIYUVaLXJEODlGSWFwZnhxQUxkM1gtWXl3RGRXV2pob09YVkR6cUtXWW1xYXNVbkZsLTJLRkdudVQ0QWhnbmdYeHVUdmtjeUpzSHZvRzBrYml2WHFRTE9ySW1ZbjFGRTFXZVpLODBUQ05SYkFOSWctV1VSU0JqMGtlQjFmX3B0b0xmUGFOZWpiOG1lVkNiek4zWnozT21RQ0MxSVREOFdXUWpIeUE?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.498474",
+      "published_at": "2026-05-17T07:00:00"
+    },
+    {
+      "id": "3f2f3e39-2982-5057-8c5e-f85b642a9866",
+      "artist": "Blok3",
+      "title": "Rapçi Blok3 davasında uyanık avukattan 10 milyonluk şantaj: Yalancı şahidimiz hazır dosyayı büyütürüz - Takvim",
+      "summary": "Rapçi Blok3 davasında uyanık avukattan 10 milyonluk şantaj: Yalancı şahidimiz hazır dosyayı büyütürüz  Takvim",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNV0NtOTluWnc3UnZlcTdvaU1ZalBqUk5KeVcxTVZHdW5URVRsNGhzd3Rza0o5djZyVlR5RlBtQl9zTDRlTm9GaWFhd0FYNTczdUhjU21ka0RCUFhENnZzZGlqNERHLUE2T0s2MzJ0V2hFdEl4VEtRMEFrbklKYTBFZGc0ejdvQk41NTNFYXF2d1c3eUJ6VTBUOWZnZE1Odw?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.684128",
+      "published_at": "2026-05-17T06:15:06"
+    },
+    {
+      "id": "41742d9f-00fb-5f38-ab3f-1300216e21d4",
+      "artist": "Blok3",
+      "title": "Blok3 gözaltına mı alındı? Blok3 neden gözaltına alındı, gerçek adı ne, Hakan Aydın kimdir, kaç yaşında? - Afyon Ana Haber",
+      "summary": "Blok3 gözaltına mı alındı? Blok3 neden gözaltına alındı, gerçek adı ne, Hakan Aydın kimdir, kaç yaşında?  Afyon Ana Haber",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOUpKZ0VOVFNUNXNsdFRwVEltZ2hDSW1CSlZnUnpUU05TRU81YzktUnlRbEJvODhfUFIxZ1cwMUFPN0E5eTUtUTRHWGFnQnVBcWtqeUVKQm13dTNsVGk2OUdTLWJOcXlhS2RBNWxXdHpPLTM5bk9lNHo5TGZHTXNvZ2Z2eDZ4Z1FkWHU2eHZQVlAyRF9sQjEwaUdsMG1Jb1N3WFJrSWVDWGdaaEhibVg5LVV1ZGZ3WWNiV0lkeGRpaDk1dkJabU5sWG55ZHTSAdIBQVVfeXFMT01aVU5hU3ctRUdNWGJ0Y2hmTmxRemNmYjA1MDhvMEV6WlFuVFhsRXFrRG0wNGJSd0lwSTQ5aFJpMXVLLVhqamdad254YUotM1VRd1o5X2MteFgxUXI1aHo2QVJrMjhMdUFBaDJBU05NRkNlT1JUOUphTTRFa0ZITXZ6ZEFUYWN5SDdQSUNZWlBWaFlaVVJSZ0F3UGtqZ3ZFWVl2ME1YZ0JvQ0lxTDAtMDIxYmJhdXVIbm14VkZsQmh1VVNrbUZJcDFMbUNwRTEzLUpR?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:43.872070",
+      "published_at": "2026-05-21T06:15:00"
+    },
+    {
+      "id": "89fa873c-a062-5c59-914c-b7ff0bfa12a1",
+      "artist": "Blok3",
+      "title": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma - Memurlar.Net",
+      "summary": "Blok3'ün ismini kullanıp şantaj yapmışlar: Avukata özel soruşturma  Memurlar.Net",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOWVvOFNOemxFYVlILU1VT0h3ZXhvUC1PbUlVU3NHRkhtOWMzU25neV9mRTYwOTFMZTNvQWdnN19fZXozOVNKdzA4OWRMMmJhUTlvcE5nLUh2RUZfcUFxRm1pRmVESXlzODJxR0tOQlNzY2ZTcVQ2c1V2NEkweXNTaklGMkpZSkpJM1pBOERRM1JmM1duSGtabm5NMXJuZHVGNkxtYkVrMy0zS3ZiTnfSAbYBQVVfeXFMUEE3RlFpNWh3d252UzhYZEZlaTRXRnVQaEhaMVd5aHpXWWxYa2xGV3RHTm5YTncycFBFcGphNjBIU2lZNC1zQkgtWEtoVnRPLXFscDdSVi1MTW9jZnB1dU1ud2ZyVWhvQmhza2NQVWhscml2NHUtT0tQWnZqWXBFczZuRGRDZkJtZUZ4ZnlaUHdackJyUkZyLXpyNmsyZm9UbFF4UnBkQjd4UHdmcjJpVUdoeXdUSmc?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.037450",
+      "published_at": "2026-05-17T07:00:00"
+    },
+    {
+      "id": "2016bbc8-bed1-5d7c-a689-c9ae7382d380",
+      "artist": "Blok3",
+      "title": "Blok3 davasından şantaj çıktı: “10 milyon TL ödeyin, dosyadan çıkaralım” - A Haber",
+      "summary": "Blok3 davasından şantaj çıktı: “10 milyon TL ödeyin, dosyadan çıkaralım”  A Haber",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcU1OMzU5OHNfQlA5a1E0M05POWQtZU96ZldMTGRKbXVOcFVnclJGYnhRbU93T2YzeUV2MEdYc1E0dlZYckdWX1lQdllEZ0c1RDd3QTZaWW5senJwVHBHYTczQTdvaUQ5Mjh4S2haMHhmb0o4QjV4RUpXUnRwUmxPdVkxdzRuaWtWYl9tbVN0aXpsQVFqUmczcmgzNlpUdVFDNXZGSkp3SzRuRUJjakI0Rmh4WQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.223852",
+      "published_at": "2026-05-17T07:00:00"
+    },
+    {
+      "id": "397d97a0-5dac-5336-9efb-3cdc3339642d",
+      "artist": "Blok3",
+      "title": "Blok3'ten gözaltı açıklaması! 'Benim evim diye başka bir eve gidilmiş' - Posta",
+      "summary": "Blok3'ten gözaltı açıklaması! 'Benim evim diye başka bir eve gidilmiş'  Posta",
+      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOV1h6MVRmb1ExUTB0MWhPTlZ5LUdsNVR6Q2Q4X212bjIycHhrYlFLMUdjSzVzQkZMRUtNWkZabHU3bHVIUFZjMkR6NGlpdXp2UVF5aUE2ZjNSa0JZeXRTeFJxTFExai1mdkt4ZVNtdUdoX01Od0ZrRG1DZDg1cmtyeEktR1I2RVFJTGVYeWE1ZUVwQ0FkcGJ3aUJMQWNBclhrM245SmFzMkdJUQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.390810",
+      "published_at": "2026-05-21T12:37:00"
+    },
+    {
+      "id": "7f051552-7c0b-5c5f-a51a-12fd9a4cb9a0",
+      "artist": "Blok3",
+      "title": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!” - Kanal 3 Tv",
+      "summary": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!”  Kanal 3 Tv",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOFdoQVNTUTUyRnVnZ29oVzJsZ1g0TXBVa3VEOXdfQ3laUXNYUUJUbGF4TUVzYUJ2cGd6QW1ELTYzdERFWnBYU2M0Unp4UDFDSDB3ZWNvb0ZrNFNFS1JZc0RJT3paTHJPR0RxbDMxcGVjOU5mNE0xeGM2UE1Oak02UEUzNWFFYUQtUmhkYUhCV0tWZGd3bUE?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.564490",
+      "published_at": "2026-05-21T11:21:05"
+    },
+    {
+      "id": "b8c6ef63-7cc3-571c-a2ba-686f31e1118b",
+      "artist": "Blok3",
+      "title": "Blok3 gözaltına mı alındı? SON DAKİKA! Blok3 neden gözaltına alındı, gerçek adı ne? Hakan Aydın kimdir, kaç yaşında? - Haberler",
+      "summary": "Blok3 gözaltına mı alındı? SON DAKİKA! Blok3 neden gözaltına alındı, gerçek adı ne? Hakan Aydın kimdir, kaç yaşında?  Haberler",
+      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbnhpWFA0dk91RXVJaE9ibVI3U2FiUWc1V29sQlctVWViNEd0dlhZaHFYc0g2M1dfaVpRUWdDMlVQUm9SOGhORVJ0LXFGMDVrLWZ6ODQ5Q21tZ2Vva3ZrUGdaLVBkYi10ZEVUWEsyX3VPX1NEdFI1amNYZW1zQXBacEwxc3pDbHBtM0h0VkpkUTVwdjhzYmhxZ0wxTFTSAZoBQVVfeXFMTWRBM1g2STgzb2RONVN5anlQQmJhSGJWNWlULVFseTYxX2l0MkwzeEVOSjJobEZ1MHJhck1La0tBTlVSMDFnM3RyYkFRMDdhZTl0NnRtWkxWTVZvYklxRDhNTWxhS3p1V0pSVGo2ZUREWTNXQ2FBM3U4NkVjNGJseGhVeGV4VXNiWnRqTkQyRXdEZzVsaGJlRnRPQQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.751917",
+      "published_at": "2026-05-21T05:49:52"
+    },
+    {
+      "id": "27b98b58-4710-5318-a184-a7b8fa31e851",
+      "artist": "Blok3",
+      "title": "Blok3 Davasında Yeni Gelişme! 10 Milyon TL Şantaj İddiası: 'Parayı Verin Adını Silelim' - CNN Türk",
+      "summary": "Blok3 Davasında Yeni Gelişme! 10 Milyon TL Şantaj İddiası: 'Parayı Verin Adını Silelim'  CNN Türk",
+      "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNU1KbTA2Q2xZMnI1b1NiQWlTbTcyTHJLMmdCeEJjdkZxX2diS01lc2lYU0RqUUxoeU5WRDZDbnhjLVdXVU9fQnVWSnE2b1Qwd3RKYjlOSll6SWFsYkJTZHA2SEdMeFRuOW9WQ3B1MklXYVN1RWRrZFE5UHVHQzNsNkxROFN3LXhHTmNVN0FuTi1MQ0tzZU9KYVhBeWlRajBnbzJGdHNQZmZXVmZaY1pBdElMUUVSN3Q5bkhzLVFhM0Z1NHJNSU1IdGx3?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.963795",
+      "published_at": "2026-05-17T07:00:00"
+    },
+    {
+      "id": "3a7b5819-1ed5-5e5a-99d1-180d41c53d8e",
+      "artist": "Blok3",
+      "title": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama - Yeniçağ Gazetesi",
+      "summary": "Blok 3 hakkında gözaltı kararı: Avukatından ilk açıklama  Yeniçağ Gazetesi",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQk1kNUhXbjlSdEM5TjhxV09pVThYSDU2NGwtbkNLZ0dpNU9UWU1SY2VDSTh1VlZ1bmxuYzZWbXJYUGd5cExoYmxyRkJhbEJUMjhyeWtsZGFNdDY1bnBqYjZKdEIzM2YtRWNnVnZOUGs1NVFrOGN4d3dBV1Y5UTltRm1kQy03Rjgtb3dWV0E4RFd1X3dhcmxQUVhScnB5czduQ0E?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:45.155882",
+      "published_at": "2026-05-21T12:59:00"
+    },
+    {
+      "id": "b6d6f791-7e34-5c14-b077-7aefc650daf5",
+      "artist": "Blok3",
+      "title": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika! - politikam.com",
+      "summary": "Rapçi BLOK3 (Hakan Aydın) Gözaltına mı Alındı? Son Dakika!  politikam.com",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTjRfdEJiejl0SHZfZzJLSWt2cUhWazI1Zk5TU0dJb2ktUEYyYkdPUWZXTG1jTW1seVZISDhOdkJUbU9rNjkxNWw0Tkxjd2VZWV94THMwRktJNFhwVU5sekx3THBoYXIxajZZTXVwNUhpT2FHVm1HRmxFaW91MndUZnZpb1Z4NTA?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:45.340549",
+      "published_at": "2026-05-21T07:35:00"
+    },
+    {
+      "id": "7f5b2c17-18e4-54da-b6d9-4f93ad1230a9",
+      "artist": "Ati242",
+      "title": "Ati242: Everest (2021) - IMDb",
+      "summary": "Ati242: Everest (2021)  IMDb",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MSGp2WTBXcGlHQ29TbnhOZUdYU1pGN2xqS2ZNU2duUVhwN190LTM1bmwwSFBxQnVDNkt4enh0NGhTaFp4ZkpCNndHOVZ6SjJMT21Xcl9GUVQ0TU00TnVadVFvQ2g1MWhFcGdOUHRsUGpyQQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:46.082643",
+      "published_at": "2026-05-17T05:28:23"
+    },
+    {
+      "id": "1fd11c28-6579-5eba-a74e-3adfe168ac12",
+      "artist": "Motive",
+      "title": "Motive Kimdir? Motive'in Sanat Kariyeri - Red Bull",
+      "summary": "Motive Kimdir? Motive'in Sanat Kariyeri  Red Bull",
+      "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFByOU5SY0VFYjNaSV9nNlU5Mm82cUZDbUFLWFdERXdScVpMTFNkdk5KbElaVGNIczNmWURUdWx2ekNRQmpKV1JJR2EycWk5VHI0cHVlNC1yZlBZTzEzUUkyZGNuckR4TXUzNXBEMmpIMmQtTXZBVENCVg?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:46.652839",
+      "published_at": "2026-05-22T12:29:06"
+    },
+    {
+      "id": "96b99d16-fd0f-5639-97d8-d78c7e954968",
+      "artist": "Motive",
+      "title": "19 Mayıs Kutlamasında Motive Rüzgarı - Aydın Times",
+      "summary": "19 Mayıs Kutlamasında Motive Rüzgarı  Aydın Times",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fLXlLc3ZERVdhOTBwTEJEZnNDQnhIcXdKRzk3VEpiNGhlUUdTaVlUMWhQYTB2b2dfOTJfOXFKTk1tMEhtcTZIMnZlYVJKcUNfVFhMMEMtNkU5R0lJR042OGh3OVpPVURWQ2llY2RIWFLSAXZBVV95cUxPT1V4bVFDaGkzcDRMY2YyNm8xYmo2WGxNMl91N241a2VkRV93LUVrOXFBX2ZVaWJXa0R1b2hhT3NFdGRnbXA5Y01ZOS0yZ2FrdjgxWEdabXhsM011UmYzTmpHMF90MWZ2V3dLSXhLMVBfZGZqRFR3?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:46.835310",
+      "published_at": "2026-05-19T20:32:00"
+    },
+    {
+      "id": "6f528dff-9da3-5608-98e9-e4da3649b28d",
+      "artist": "Motive",
+      "title": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti - Yeni Birlik Gazetesi",
+      "summary": "Aydın'da 19 Mayıs coşkusu: Motive konserine 40 bin kişi akın etti  Yeni Birlik Gazetesi",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd24tRXhZWUhMYVpvUHNKZ0cxMjR4dEN6Mi05cnl6bFhFZ1FsQ1pSVTA0N24wUW8xTmRPdFI3NjBUN0V4YjVGVjhVWmV2Y2NaTXcxcWl2WEJTUl9BNE44cU90ZVBkQUc0djdwX0tSNWotbEZ3MWRYVm1FRl80SFZ2UXhkcmtLR3NqUWl1RWFTSVJ0NVVYSUxzY1FMSkxXdkdjTVExRDRQU2pkbVFTR1QwR2Rqaw?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:47.015802",
+      "published_at": "2026-05-21T19:46:59"
+    },
+    {
+      "id": "c36e7d0b-879e-53c3-aba8-c7aff816d7e7",
+      "artist": "Uzi",
+      "title": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler… - dokuz8HABER",
+      "summary": "Uzi Nereli? Ebo ile Kavgası Hakkında Tüm Merak Edilenler…  dokuz8HABER",
+      "source_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1HN25GdEhOZk83THZLNTByVUhFVms2V0hYai1EUXZqOU9odFBnWWpORHlNandZVEpYSXlabkpwMGhJR1hwVHpFWVB4SQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:47.798703",
+      "published_at": "2026-05-14T16:31:02"
+    },
+    {
+      "id": "3238ba45-2fd1-5413-bb66-0318fe2f3fb5",
+      "artist": "Ezhel",
+      "title": "Killa Hakan feat. Ceza & Ezhel & Ben Fero: Fight Kulüp (2019) - IMDb",
+      "summary": "Killa Hakan feat. Ceza & Ezhel & Ben Fero: Fight Kulüp (2019)  IMDb",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54OGgzb2d0dWNwVEs0ZTVWVVFLSUR6NWI2UEJ4Nm51c1VYQ2VreXJGeXFaQjdqV1lHWXFMLVM2ekNCUEhJb0p0bmRqZkV1OHZrajFxSEs4MnNCMnE5djhxR0hEZnZ0OVE0aUhfbWh2OWc?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:48.987949",
+      "published_at": "2026-05-18T22:14:06"
+    }
+  ],
+  "posted": [
+    {
+      "id": "6a634637-02ae-5afd-88a7-ff573c15272e",
+      "artist": "Blok3",
+      "title": "Blok3 Gözaltına mı Alındı? Blok3 Hakkında Neden Gözaltı Kararı Çıktı? - Onedio",
+      "summary": "Blok3 Gözaltına mı Alındı? Blok3 Hakkında Neden Gözaltı Kararı Çıktı?  Onedio",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWGlSNExEeDVkLWM1VVZSZUdIX2VKX2NJQUhvTjZuN2JDYmY4Z3ZFeWU1dlpXaVRwQWxneFUtR19Ub0lMakVGeXY2dy11NDRQalQyUjJVbHFfbG8yaUxabTN3bWVtN2habDBVZnl4T0EyOG9uXzhhVm9qaTdZYzBSQ3VqdS1SLVo5Y0FyTEJGYWJSd01Ib3VWb0pURVZUNV93bkE?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:42.361255",
+      "published_at": "2026-05-21T05:55:17",
+      "posted_at": "2026-05-27T13:28:50.932439"
+    }
+  ],
+  "last_scrape": "2026-05-27T13:28:49.558984"
 }
