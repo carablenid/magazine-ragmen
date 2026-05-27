@@ -29,7 +29,7 @@ def _session_path() -> str:
 
 with sync_playwright() as p:
     browser = p.chromium.launch(
-        headless=not SESSION_FILE.exists(),  # yerelde görsel, Actions'ta headless
+        headless=not SESSION_FILE.exists(),
         args=["--no-sandbox", "--disable-dev-shm-usage"],
     )
     ctx = browser.new_context(
@@ -43,27 +43,51 @@ with sync_playwright() as p:
     )
     page = ctx.new_page()
     page.goto("https://www.instagram.com/magazineragmen/", wait_until="domcontentloaded", timeout=60000)
-    page.wait_for_timeout(3000)
+    page.wait_for_timeout(5000)
+    page.screenshot(path="delete_debug1.png")
 
     if "accounts/login" in page.url:
         browser.close()
         raise SystemExit("Session geçersiz. create_session.py ile yenile.")
 
-    # İlk post'a tıkla
-    first_post = page.locator('article a[href*="/p/"]').first
-    first_post.wait_for(timeout=15000)
-    first_post.click()
-    page.wait_for_timeout(2000)
+    # Profil sayfasındaki ilk post linki
+    post_selectors = [
+        'a[href*="/p/"]',
+        'div[style*="flex"] a[href*="/p/"]',
+        'main a[href*="/p/"]',
+    ]
+    clicked = False
+    for sel in post_selectors:
+        try:
+            page.wait_for_selector(sel, timeout=10000)
+            page.locator(sel).first.click()
+            clicked = True
+            print(f"Post'a tıklandı: {sel}")
+            break
+        except Exception:
+            continue
+
+    if not clicked:
+        page.screenshot(path="delete_debug_fail.png")
+        browser.close()
+        raise SystemExit("Profil sayfasında post bulunamadı.")
+
+    page.wait_for_timeout(3000)
+    page.screenshot(path="delete_debug2.png")
 
     # Üç nokta menüsü
-    page.locator('svg[aria-label="More options"]').click(timeout=10000)
+    three_dot = page.locator('svg[aria-label="More options"]')
+    three_dot.wait_for(timeout=10000)
+    three_dot.click()
     page.wait_for_timeout(1000)
+    page.screenshot(path="delete_debug3.png")
 
-    # Delete
+    # Delete menü öğesi
     page.get_by_text("Delete", exact=True).click(timeout=10000)
     page.wait_for_timeout(1000)
+    page.screenshot(path="delete_debug4.png")
 
-    # Onay dialogu
+    # Onay butonu
     page.get_by_role("button", name="Delete").click(timeout=10000)
     page.wait_for_timeout(3000)
 

@@ -27,3 +27,11 @@ jobs:
         env:
           INSTAGRAM_PLAYWRIGHT_SESSION: ${{ secrets.INSTAGRAM_PLAYWRIGHT_SESSION }}
         run: python delete_last_post.py
+
+      - name: Debug screenshots yükle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: delete-debug-shots
+          path: delete_debug*.png
+          if-no-files-found: ignore
