@@ -45,6 +45,24 @@ def _click_first(page, selectors: list[str], timeout: int = 8000):
     raise RuntimeError(f"Hiçbir selector bulunamadı: {selectors}")
 
 
+def _js_click_text(page, text: str) -> bool:
+    """DOM'da exact text ile eşleşen görünür ilk elemente JS click atar."""
+    return page.evaluate(f"""
+        () => {{
+            const all = document.querySelectorAll('*');
+            for (const el of all) {{
+                if (el.children.length === 0 &&
+                    el.textContent.trim() === '{text}' &&
+                    el.offsetParent !== null) {{
+                    el.click();
+                    return true;
+                }}
+            }}
+            return false;
+        }}
+    """)
+
+
 def post_photo(image_path: str, caption: str) -> str:
     from playwright.sync_api import sync_playwright
 
@@ -99,12 +117,11 @@ def post_photo(image_path: str, caption: str) -> str:
         page.wait_for_timeout(4000)
         _shot(page, "03_after_file_upload")
 
-        # Crop ekranı → Next (Instagram header'daki Next bir div/span, button değil)
+        # Crop ekranı → Next
         _click_first(page, [
             'text=Next',
             '[role="button"]:has-text("Next")',
             'span:has-text("Next")',
-            'button:has-text("Next")',
         ], timeout=15000)
         log.info("Crop Next tıklandı.")
         page.wait_for_timeout(2000)
@@ -115,32 +132,34 @@ def post_photo(image_path: str, caption: str) -> str:
             'text=Next',
             '[role="button"]:has-text("Next")',
             'span:has-text("Next")',
-            'button:has-text("Next")',
         ], timeout=15000)
         log.info("Filter Next tıklandı.")
         page.wait_for_timeout(2000)
         _shot(page, "05_after_filter_next")
 
-        # Caption ekranı
+        # Caption ekranı — keyboard.type ile yaz
         caption_sel = 'div[role="textbox"], div[contenteditable="true"]'
         page.wait_for_selector(caption_sel, timeout=15000)
         page.click(caption_sel)
-        # keyboard.type ile yaz — fill() Instagram JS eventlarını tetiklemiyor
         page.keyboard.type(caption)
         log.info("Caption girildi.")
-        # Hashtag autocomplete dropdown'ını kapat
-        page.keyboard.press("Escape")
-        page.wait_for_timeout(2000)
+
+        # Dialog başlığına tıkla → autocomplete kapanır, Discard açılmaz
+        try:
+            page.click('text=Create new post', timeout=3000)
+        except Exception:
+            pass
+        page.wait_for_timeout(1500)
         _shot(page, "06_caption_filled")
-        _shot(page, "06b_before_share")
-        _click_first(page, [
-            'text=Share',
-            '[role="button"]:has-text("Share")',
-            'button:has-text("Share")',
-            'a:has-text("Share")',
-        ], timeout=15000)
+
+        # Share — önce JS ile dene (disabled state'i de aşar)
+        log.info("Share tıklanıyor...")
+        clicked = _js_click_text(page, "Share")
+        if not clicked:
+            # JS başarısız olduysa Playwright force click
+            page.click('text=Share', force=True, timeout=10000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
-        page.wait_for_timeout(6000)
+        page.wait_for_timeout(7000)
         _shot(page, "07_after_share")
         log.info("Post paylaşıldı!")
 
