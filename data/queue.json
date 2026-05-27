@@ -1,16 +1,6 @@
 {
   "queue": [
     {
-      "id": "397d97a0-5dac-5336-9efb-3cdc3339642d",
-      "artist": "Blok3",
-      "title": "Blok3'ten gözaltı açıklaması! 'Benim evim diye başka bir eve gidilmiş' - Posta",
-      "summary": "Blok3'ten gözaltı açıklaması! 'Benim evim diye başka bir eve gidilmiş'  Posta",
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOV1h6MVRmb1ExUTB0MWhPTlZ5LUdsNVR6Q2Q4X212bjIycHhrYlFLMUdjSzVzQkZMRUtNWkZabHU3bHVIUFZjMkR6NGlpdXp2UVF5aUE2ZjNSa0JZeXRTeFJxTFExai1mdkt4ZVNtdUdoX01Od0ZrRG1DZDg1cmtyeEktR1I2RVFJTGVYeWE1ZUVwQ0FkcGJ3aUJMQWNBclhrM245SmFzMkdJUQ?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-27T13:28:44.390810",
-      "published_at": "2026-05-21T12:37:00"
-    },
-    {
       "id": "7f051552-7c0b-5c5f-a51a-12fd9a4cb9a0",
       "artist": "Blok3",
       "title": "Blok3’ün avukatından açıklama: “Uyuşturucular müvekkilime ait değil!” - Kanal 3 Tv",
@@ -219,6 +209,16 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-27T13:28:44.223852",
       "published_at": "2026-05-17T07:00:00"
+    },
+    {
+      "id": "397d97a0-5dac-5336-9efb-3cdc3339642d",
+      "artist": "Blok3",
+      "title": "Blok3'ten gözaltı açıklaması! 'Benim evim diye başka bir eve gidilmiş' - Posta",
+      "summary": "Blok3'ten gözaltı açıklaması! 'Benim evim diye başka bir eve gidilmiş'  Posta",
+      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOV1h6MVRmb1ExUTB0MWhPTlZ5LUdsNVR6Q2Q4X212bjIycHhrYlFLMUdjSzVzQkZMRUtNWkZabHU3bHVIUFZjMkR6NGlpdXp2UVF5aUE2ZjNSa0JZeXRTeFJxTFExai1mdkt4ZVNtdUdoX01Od0ZrRG1DZDg1cmtyeEktR1I2RVFJTGVYeWE1ZUVwQ0FkcGJ3aUJMQWNBclhrM245SmFzMkdJUQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-27T13:28:44.390810",
+      "published_at": "2026-05-21T12:37:00"
     }
   ],
   "posted": [
@@ -234,5 +234,5 @@
       "posted_at": "2026-05-27T13:28:50.932439"
     }
   ],
-  "last_scrape": "2026-05-27T14:20:22.989948"
+  "last_scrape": "2026-05-27T14:24:17.945035"
 }
