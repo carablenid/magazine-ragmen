@@ -7,7 +7,6 @@ from pathlib import Path
 log = logging.getLogger(__name__)
 
 SESSION_FILE = Path("playwright_session.json")
-SCREENSHOT_DIR = Path("/tmp/ig_debug")
 
 
 def _load_session_path() -> str:
@@ -25,13 +24,6 @@ def _load_session_path() -> str:
         "Instagram session bulunamadı. "
         "create_session.py çalıştırarak playwright_session.json oluştur."
     )
-
-
-def _shot(page, name: str):
-    SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
-    path = str(SCREENSHOT_DIR / f"{name}.png")
-    page.screenshot(path=path, full_page=False)
-    log.info("Screenshot: %s", path)
 
 
 def _click_first(page, selectors: list[str], timeout: int = 8000):
@@ -92,14 +84,12 @@ def post_photo(image_path: str, caption: str) -> str:
         log.info("Instagram ana sayfasına gidiliyor...")
         page.goto("https://www.instagram.com/", wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout(3000)
-        _shot(page, "01_homepage")
 
         if "accounts/login" in page.url:
             browser.close()
             raise RuntimeError("Instagram session geçersiz. create_session.py ile yenile.")
 
-        log.info("Mevcut URL: %s", page.url)
-        log.info("Yeni post akışı başlatılıyor...")
+        log.info("Mevcut URL: %s | Yeni post başlatılıyor...", page.url)
 
         # Create butonu
         _click_first(page, [
@@ -108,7 +98,6 @@ def post_photo(image_path: str, caption: str) -> str:
             'svg[aria-label="New post"]',
         ], timeout=10000)
         page.wait_for_timeout(2000)
-        _shot(page, "02_after_create_click")
 
         # Dosya seçici
         with page.expect_file_chooser(timeout=15000) as fc_info:
@@ -117,9 +106,8 @@ def post_photo(image_path: str, caption: str) -> str:
                 '[role="button"]:has-text("Select from computer")',
             ], timeout=10000)
         fc_info.value.set_files(abs_path)
-        log.info("Görsel yüklendi, crop ekranı bekleniyor...")
+        log.info("Görsel yüklendi.")
         page.wait_for_timeout(4000)
-        _shot(page, "03_after_file_upload")
 
         # Crop ekranı → Next
         _click_first(page, [
@@ -129,7 +117,6 @@ def post_photo(image_path: str, caption: str) -> str:
         ], timeout=15000)
         log.info("Crop Next tıklandı.")
         page.wait_for_timeout(2000)
-        _shot(page, "04_after_crop_next")
 
         # Filter ekranı → Next
         _click_first(page, [
@@ -139,9 +126,8 @@ def post_photo(image_path: str, caption: str) -> str:
         ], timeout=15000)
         log.info("Filter Next tıklandı.")
         page.wait_for_timeout(2000)
-        _shot(page, "05_after_filter_next")
 
-        # Caption ekranı — keyboard.type ile yaz
+        # Caption ekranı — keyboard.type ile yaz (fill() React eventlarını tetiklemiyor)
         caption_sel = 'div[role="textbox"], div[contenteditable="true"]'
         page.wait_for_selector(caption_sel, timeout=15000)
         page.click(caption_sel)
@@ -154,17 +140,14 @@ def post_photo(image_path: str, caption: str) -> str:
         except Exception:
             pass
         page.wait_for_timeout(1500)
-        _shot(page, "06_caption_filled")
 
         # Share — dialog içinde elementin koordinatına gerçek mouse click
         log.info("Share tıklanıyor...")
         clicked = _mouse_click_text_in_dialog(page, "Share")
         if not clicked:
-            # Fallback: Playwright locator ile dialog'a scope'la
             page.locator('div[role="dialog"]').get_by_text("Share", exact=True).click(force=True, timeout=10000)
         log.info("Share tıklandı, tamamlanması bekleniyor...")
         page.wait_for_timeout(7000)
-        _shot(page, "07_after_share")
         log.info("Post paylaşıldı!")
 
         browser.close()
