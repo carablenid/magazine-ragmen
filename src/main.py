@@ -65,16 +65,26 @@ def run():
     item["title"] = _clean_title(item["title"])
     log.info("İşleniyor: %s — %s", item["artist"], item["title"])
 
-    # Caption
-    try:
-        caption = generate_caption(item)
-        ok, reason = validate_caption(caption)
-        if not ok:
-            log.warning("ALTIN KURAL — caption reddedildi: %s", reason)
-            caption = f"{item['artist'].upper()} — {item['title'][:120]}\n\n#magazineragmen #türkçerap"
-    except Exception as e:
-        log.error("Caption üretilemedi: %s", e)
-        caption = f"{item['title']}\n\n#magazineragmen #türkçerap"
+    # Caption — üret, validate et, hata varsa bir kez daha dene
+    caption = None
+    for attempt in range(1, 3):
+        try:
+            candidate = generate_caption(item)
+            ok, errors = validate_caption(candidate)
+            if ok:
+                caption = candidate
+                break
+            log.warning(
+                "Caption KURAL İHLALİ (deneme %d/2): %s | İhlaller: %s",
+                attempt, candidate[:80], "; ".join(errors),
+            )
+        except Exception as e:
+            log.error("Caption üretilemedi (deneme %d/2): %s", attempt, e)
+            break
+
+    if caption is None:
+        log.warning("Caption 2 denemede de geçemedi — fallback kullanılıyor.")
+        caption = f"{item['artist'].upper()} — {item['title'][:120]}\n\n#magazineragmen #türkçerap"
 
     # Görsel
     try:

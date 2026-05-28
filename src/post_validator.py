@@ -36,6 +36,28 @@ CAPTION_URL_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
+# Caption'da asla geçmemeli
+CAPTION_BANNED_WORDS = ["camia"]
+
+# Haber ajansı pasif yapıları — magazin değil, haber dili
+CAPTION_PASSIVE_WORDS = [
+    "açıklandı", "belirtildi", "aktarıldı", "ifade edildi",
+    "paylaşıldı", "duyuruldu", "yayınlandı", "yayımlandı",
+    "gerçekleştirildi", "bırakıldı", "söylendi", "bildirildi",
+    "kaydedildi", "gönderildi",
+]
+
+# Medya kuruluşu adı veya atıf kalıbı
+CAPTION_MEDIA_PATTERNS = [
+    r"sitesine\s+göre", r"haberine\s+göre", r"kanalına\s+göre",
+    r"yayınına\s+göre", r"gazetesine\s+göre",
+    r"\bntv\b", r"\bcnn\s*türk\b", r"\bhabertürk\b", r"\bshow\s*tv\b",
+    r"\bfox\s*tv\b", r"\bkanal\s*d\b", r"\ba\s*haber\b", r"\btrt\b",
+    r"\bhürriyet\b", r"\bmilliyet\b",
+    r"\bspotify\b", r"\byoutube\b",
+]
+_MEDIA_RE = re.compile("|".join(CAPTION_MEDIA_PATTERNS), re.IGNORECASE)
+
 
 def _age_hours(item: dict) -> float:
     try:
@@ -76,8 +98,26 @@ def validate_item(item: dict) -> tuple[bool, str]:
     return True, "OK"
 
 
-def validate_caption(caption: str) -> tuple[bool, str]:
-    """Caption'da URL / link olmamalı."""
+def validate_caption(caption: str) -> tuple[bool, list[str]]:
+    """Caption SYSTEM_PROMPT kurallarına uyuyor mu? (False, [hatalar]) döndürür."""
+    errors = []
+    lower = caption.lower()
+
     if CAPTION_URL_PATTERN.search(caption):
-        return False, "Caption'da URL/link tespit edildi — YASAK"
-    return True, "OK"
+        errors.append("URL/link var")
+
+    for word in CAPTION_BANNED_WORDS:
+        if word in lower:
+            errors.append(f"Yasak kelime: '{word}'")
+
+    for word in CAPTION_PASSIVE_WORDS:
+        if word in lower:
+            errors.append(f"Pasif yapı: '{word}'")
+
+    m = _MEDIA_RE.search(caption)
+    if m:
+        errors.append(f"Medya adı/atıf: '{m.group()}'")
+
+    if errors:
+        return False, errors
+    return True, []
