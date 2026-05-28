@@ -29,16 +29,6 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
       "scraped_at": "2026-05-28T10:35:40.477221",
       "published_at": "2026-05-14T12:51:14"
-    },
-    {
-      "id": "5439e23f-cff0-5d34-bacf-69e63190e996",
-      "artist": "Ceza",
-      "title": "Kocaeli'de Türk rap müziği sanatçısı \"Ceza\" konser verdi",
-      "summary": "Kocaeli'de Türk rap müziği sanatçısı \"Ceza\" konser verdi  Habertürk",
-      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcUZFaHR6NDRDRHppRkFDTFpqMDhTZUZkb2ZjNUE4cEVQN2xmOV80RkV3cGowSzhMX0FJRmhnNU5wd0p6bFlRaFF6aS0xVmk5ZWt5TnZYbFJJdjRoelI5LWVOQlN1LXF3QXRMTk5mdDFDWVM5Uks2Q0MyRGtOcFByM1Nzb3BIZDlHam1LNWoxa2pvbWFvNDl1UE94QU1ZdVIyd1JkNDZFOW5wUnZlTFVCdDlsc0I2ek56VXd1T3pB?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-28T10:35:34.368446",
-      "published_at": "2026-05-17T20:42:39"
     }
   ],
   "posted": [
@@ -250,7 +240,18 @@
       "scraped_at": "2026-05-28T10:35:26.334758",
       "published_at": "2026-05-17T07:00:00",
       "posted_at": "2026-05-28T10:59:04.877202"
+    },
+    {
+      "id": "5439e23f-cff0-5d34-bacf-69e63190e996",
+      "artist": "Ceza",
+      "title": "Kocaeli'de Türk rap müziği sanatçısı \"Ceza\" konser verdi",
+      "summary": "Kocaeli'de Türk rap müziği sanatçısı \"Ceza\" konser verdi  Habertürk",
+      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcUZFaHR6NDRDRHppRkFDTFpqMDhTZUZkb2ZjNUE4cEVQN2xmOV80RkV3cGowSzhMX0FJRmhnNU5wd0p6bFlRaFF6aS0xVmk5ZWt5TnZYbFJJdjRoelI5LWVOQlN1LXF3QXRMTk5mdDFDWVM5Uks2Q0MyRGtOcFByM1Nzb3BIZDlHam1LNWoxa2pvbWFvNDl1UE94QU1ZdVIyd1JkNDZFOW5wUnZlTFVCdDlsc0I2ek56VXd1T3pB?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T10:35:34.368446",
+      "published_at": "2026-05-17T20:42:39",
+      "posted_at": "2026-05-28T11:08:08.372933"
     }
   ],
-  "last_scrape": "2026-05-28T10:57:53.060644"
+  "last_scrape": "2026-05-28T11:08:03.964272"
 }
