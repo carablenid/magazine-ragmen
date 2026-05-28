@@ -1,16 +1,5 @@
 {
-  "queue": [
-    {
-      "id": "07bf31ed-b752-545a-a968-f41355549c89",
-      "artist": "Blok3",
-      "title": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?",
-      "summary": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?  Haberler",
-      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNakt0SEZWY1dKc3UxaWE2WW82dTJrTWFQZEY4d3BsWDJQTzNmOEhFRmgwWnZWbEdaZENYZXBRcVNrekpPM0o3QWQ1SngwSkYxUzBXOW5IdXpUdzdFMFVqMl9hX2I2UW94NTQ2T3BvUFZISlFlRnVzb1c1OGpUWEZmSzJ0aXdtdHBBTlRwUGJ6NE1pUWRHNVBLcmtLYS04QdIBmwFBVV95cUxPZkIwUXRYZm5SUXZLbXFFRTlrZ3k3Y21RQzI4WkZoUV8zWE4tbm8tSzFhUFpvUmJQWDQ0YnV6TEV6YkJvM19mODVQRUU4TFc3aHN5MlhzUlVSLW9sWktuNUNvY0JydGtiOVZ0SndVMmM1OFhGVTFDal9LVWxmcmo3OXJCY3F2QzBEclhHdkNlaTVXaTFTX0taUzFJcw?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-28T09:47:39.274473",
-      "published_at": "2026-05-21T12:23:15"
-    }
-  ],
+  "queue": [],
   "posted": [
     {
       "id": "6a634637-02ae-5afd-88a7-ff573c15272e",
@@ -165,7 +154,18 @@
       "scraped_at": "2026-05-28T09:47:43.018718",
       "published_at": "2026-05-26T16:15:10",
       "posted_at": "2026-05-28T09:48:53.419741"
+    },
+    {
+      "id": "07bf31ed-b752-545a-a968-f41355549c89",
+      "artist": "Blok3",
+      "title": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?",
+      "summary": "Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?  Haberler",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNakt0SEZWY1dKc3UxaWE2WW82dTJrTWFQZEY4d3BsWDJQTzNmOEhFRmgwWnZWbEdaZENYZXBRcVNrekpPM0o3QWQ1SngwSkYxUzBXOW5IdXpUdzdFMFVqMl9hX2I2UW94NTQ2T3BvUFZISlFlRnVzb1c1OGpUWEZmSzJ0aXdtdHBBTlRwUGJ6NE1pUWRHNVBLcmtLYS04QdIBmwFBVV95cUxPZkIwUXRYZm5SUXZLbXFFRTlrZ3k3Y21RQzI4WkZoUV8zWE4tbm8tSzFhUFpvUmJQWDQ0YnV6TEV6YkJvM19mODVQRUU4TFc3aHN5MlhzUlVSLW9sWktuNUNvY0JydGtiOVZ0SndVMmM1OFhGVTFDal9LVWxmcmo3OXJCY3F2QzBEclhHdkNlaTVXaTFTX0taUzFJcw?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T09:47:39.274473",
+      "published_at": "2026-05-21T12:23:15",
+      "posted_at": "2026-05-28T10:02:36.900847"
     }
   ],
-  "last_scrape": "2026-05-28T09:47:43.719135"
+  "last_scrape": "2026-05-28T10:01:22.485386"
 }
