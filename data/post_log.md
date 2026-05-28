@@ -32,3 +32,7 @@
 **Başlık:** BLOK3’ün “La Catedral” gecesi yok satıyor
 **Kaynak:** https://news.google.com/rss/articles/CBMibEFVX3lxTFB3dEt0cjhZUVAydUd5Z2IxcjhFbGxfdDE4SFB6TEdaSmxlNjVDWlhGNUpWMkhzc1UtdHJnc01QOTBaX0d3azNoLVczNkJWU2N5MldxUHROdTNMa3ZtM2RVNUV2d21mOXBfZTJpOA?oc=5
 
+## 2026-05-28 09:48 UTC — Ezhel
+**Başlık:** Ezhel: Aglattin (2022)
+**Kaynak:** https://news.google.com/rss/articles/CBMicEFVX3lxTE5oNDMyWEFRVnFxT1RwOUd3Rkx1Z2ZjWEpqdXNrRWF4Rk5wdWh3cU9qX3pvUTRjYTlLbDNEQ1g2bFZtcXFNMFEzckVJWnMweXN2MDZRZEFlbDBIQ3I2QzFZU2FTWmxzWU1rZUFwMEQ5cGE?oc=5
+
