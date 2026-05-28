@@ -36,23 +36,49 @@ def _ascii_slug(text: str) -> str:
 
 def _wikipedia_image_url(artist: str) -> str | None:
     names = [artist, _ascii_slug(artist)]
-    # Türkçe Wikipedia önce — Türk sanatçılar için daha kapsamlı
-    for lang in ("tr", "en"):
-        base = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/"
-        variants = ["{artist}", "{artist} (rapper)", "{artist} (müzisyen)", "{artist} (musician)"]
-        for variant in variants:
-            for name in names:
-                title = variant.format(artist=name)
-                try:
-                    r = requests.get(base + requests.utils.quote(title, safe=""), headers=HEADERS, timeout=10)
-                    if r.status_code == 200:
-                        data = r.json()
-                        thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
-                        if thumb:
-                            log.info("%s Wikipedia'dan fotoğraf bulundu: %s", lang.upper(), title)
-                            return thumb
-                except Exception as e:
-                    log.debug("Wikipedia sorgusu başarısız (%s %s): %s", lang, title, e)
+
+    # EN Wikipedia önce — belirsiz Türkçe kelimelerde (örn. "Ceza") yanlış makale riski yok
+    en_variants = [
+        "{artist}", "{artist} (rapper)", "{artist} (musician)",
+    ]
+    for variant in en_variants:
+        for name in names:
+            title = variant.format(artist=name)
+            try:
+                r = requests.get(
+                    "https://en.wikipedia.org/api/rest_v1/page/summary/" + requests.utils.quote(title, safe=""),
+                    headers=HEADERS, timeout=10,
+                )
+                if r.status_code == 200:
+                    data = r.json()
+                    thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
+                    if thumb:
+                        log.info("EN Wikipedia'dan fotoğraf bulundu: %s", title)
+                        return thumb
+            except Exception as e:
+                log.debug("Wikipedia sorgusu başarısız (en %s): %s", title, e)
+
+    # TR Wikipedia sadece belirsizlik ekleriyle — bare isim hiçbir zaman değil
+    tr_disambiguation = [
+        "{artist} (rapçi)", "{artist} (müzisyen)", "{artist} (şarkıcı)",
+    ]
+    for variant in tr_disambiguation:
+        for name in names:
+            title = variant.format(artist=name)
+            try:
+                r = requests.get(
+                    "https://tr.wikipedia.org/api/rest_v1/page/summary/" + requests.utils.quote(title, safe=""),
+                    headers=HEADERS, timeout=10,
+                )
+                if r.status_code == 200:
+                    data = r.json()
+                    thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
+                    if thumb:
+                        log.info("TR Wikipedia'dan fotoğraf bulundu: %s", title)
+                        return thumb
+            except Exception as e:
+                log.debug("Wikipedia sorgusu başarısız (tr %s): %s", title, e)
+
     return None
 
 
