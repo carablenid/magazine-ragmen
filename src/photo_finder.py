@@ -4,7 +4,7 @@ import logging
 import requests
 from PIL import Image
 
-from config import IMAGE_SIZE
+from config import IMAGE_SIZE, ARTIST_PHOTO_TERMS
 
 log = logging.getLogger(__name__)
 
@@ -56,6 +56,34 @@ def _wikipedia_image_url(artist: str) -> str | None:
     return None
 
 
+def _ddgs_image_url(artist: str) -> str | None:
+    try:
+        from ddgs import DDGS
+    except ImportError:
+        try:
+            from duckduckgo_search import DDGS
+        except ImportError:
+            log.warning("ddgs paketi yüklü değil.")
+            return None
+
+    specific = ARTIST_PHOTO_TERMS.get(artist)
+    queries = [specific] if specific else []
+    queries += [f"{artist} türk rapper"]
+
+    for query in queries:
+        try:
+            with DDGS() as ddgs:
+                results = list(ddgs.images(query, max_results=5))
+            for r in results:
+                url = r.get("image", "")
+                if url.startswith("http"):
+                    log.info("DuckDuckGo'dan fotoğraf bulundu: %s", query)
+                    return url
+        except Exception as e:
+            log.debug("DuckDuckGo sorgusu başarısız (%s): %s", query, e)
+    return None
+
+
 def _download_and_resize(url: str) -> Image.Image | None:
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
@@ -73,11 +101,15 @@ def _download_and_resize(url: str) -> Image.Image | None:
 
 
 def find_artist_photo(artist: str) -> Image.Image | None:
+    # Wikipedia önce — güvenilir, doğrulanmış
     url = _wikipedia_image_url(artist)
+    # Yoksa DuckDuckGo — sanatçıya özel arama terimleriyle
     if not url:
-        log.warning("'%s' için Wikipedia'da fotoğraf bulunamadı — fallback kullanılacak.", artist)
+        url = _ddgs_image_url(artist)
+    if not url:
+        log.warning("'%s' için hiçbir kaynaktan fotoğraf bulunamadı.", artist)
         return None
     img = _download_and_resize(url)
     if img:
-        log.info("'%s' fotoğrafı Wikipedia'dan alındı.", artist)
+        log.info("'%s' fotoğrafı alındı.", artist)
     return img
