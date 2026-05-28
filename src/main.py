@@ -100,7 +100,7 @@ def run():
         log.info("[DRY RUN] Post atılmadı.")
         log.info("[DRY RUN] Caption: %s", caption)
         log.info("[DRY RUN] Görsel: %s", img_path)
-        mark_as_posted([item])
+        add_items([item])  # dry run'da item'ı geri koy, tüketme
         return
 
     # Instagram'a gönder
