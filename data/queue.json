@@ -1,5 +1,56 @@
 {
-  "queue": [],
+  "queue": [
+    {
+      "id": "7f5b2c17-18e4-54da-b6d9-4f93ad1230a9",
+      "artist": "Ati242",
+      "title": "Ati242: Everest (2021)",
+      "summary": "Ati242: Everest (2021)  IMDb",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MSGp2WTBXcGlHQ29TbnhOZUdYU1pGN2xqS2ZNU2duUVhwN190LTM1bmwwSFBxQnVDNkt4enh0NGhTaFp4ZkpCNndHOVZ6SjJMT21Xcl9GUVQ0TU00TnVadVFvQ2g1MWhFcGdOUHRsUGpyQQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T15:44:48.459166",
+      "published_at": "2026-05-17T05:28:23"
+    },
+    {
+      "id": "6ad63d54-fa45-543e-802c-539ff1f1ed87",
+      "artist": "Ceza",
+      "title": "Kocaeli İzmit'te Ceza'nın Konserinde On Binlerce Hayranı Coştu",
+      "summary": "Kocaeli İzmit'te Ceza'nın Konserinde On Binlerce Hayranı Coştu  Mersin Haber",
+      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOERzSnVQd3lsMWtwNXRvZ1YzM1d5aXRreVkyYUZzXzY3VHBBdlZsNkpuVnFQR1dCa0YwR0o0ZER1ZDh3YVdzRWVzbTBZVWpvSWtac09mLVlfaUZqMVFpUC1xWXIyRjgzcDR2NkVzVFhXc2pIVTBVbTNuN0tueTV1OVByUHp1YVlQLWEweHQ1VXRSMWh0UlNldVNzOVlrNEtTdmlV0gFXQVVfeXFMT0J4UXU0cmxNSms1RThoaFlvVFhlRUFUUHRlUE5CT005WU02ZF8ydGJMd0ZzcFhBUVlnWEY5Q0NNZUJKMWk5cnFsTm5fRXFHY04yVmFKY2o0?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T15:44:53.076869",
+      "published_at": "2026-05-17T07:00:00"
+    },
+    {
+      "id": "8759abee-5bc3-58cf-bb79-6bb3e3c49f19",
+      "artist": "Yener Çevik",
+      "title": "İstanbul Kanye West’e hazırlanıyor",
+      "summary": "İstanbul Kanye West’e hazırlanıyor  Milliyet",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcERuV3l2bTI1cmtLR3lSVU9hbmpSeXB4LUFtMm5Bd3JQc0xjUGxLVkJFbUNBWnFxdnp1aWp1aFJIRDJDMm9fcUYtZlNIZWZ6UG9nbVdVOUV1bV9hU1FFTllEVDNTbVNWamV5c2VORFNld041ZTFMeDFlUFIyaDVxRXFxSQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T15:44:55.102064",
+      "published_at": "2026-05-28T04:00:00"
+    },
+    {
+      "id": "b8c6ef63-7cc3-571c-a2ba-686f31e1118b",
+      "artist": "Blok3",
+      "title": "Blok3 gözaltına mı alındı? SON DAKİKA! Blok3 neden gözaltına alındı, gerçek adı ne? Hakan Aydın kimdir, kaç yaşında?",
+      "summary": "Blok3 gözaltına mı alındı? SON DAKİKA! Blok3 neden gözaltına alındı, gerçek adı ne? Hakan Aydın kimdir, kaç yaşında?  Haberler",
+      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbnhpWFA0dk91RXVJaE9ibVI3U2FiUWc1V29sQlctVWViNEd0dlhZaHFYc0g2M1dfaVpRUWdDMlVQUm9SOGhORVJ0LXFGMDVrLWZ6ODQ5Q21tZ2Vva3ZrUGdaLVBkYi10ZEVUWEsyX3VPX1NEdFI1amNYZW1zQXBacEwxc3pDbHBtM0h0VkpkUTVwdjhzYmhxZ0wxTFTSAZoBQVVfeXFMTWRBM1g2STgzb2RONVN5anlQQmJhSGJWNWlULVFseTYxX2l0MkwzeEVOSjJobEZ1MHJhck1La0tBTlVSMDFnM3RyYkFRMDdhZTl0NnRtWkxWTVZvYklxRDhNTWxhS3p1V0pSVGo2ZUREWTNXQ2FBM3U4NkVjNGJseGhVeGV4VXNiWnRqTkQyRXdEZzVsaGJlRnRPQQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T15:44:46.926991",
+      "published_at": "2026-05-21T05:49:52"
+    },
+    {
+      "id": "2016bbc8-bed1-5d7c-a689-c9ae7382d380",
+      "artist": "Blok3",
+      "title": "Blok3 davasından şantaj çıktı: “10 milyon TL ödeyin, dosyadan çıkaralım”",
+      "summary": "Blok3 davasından şantaj çıktı: “10 milyon TL ödeyin, dosyadan çıkaralım”  A Haber",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcU1OMzU5OHNfQlA5a1E0M05POWQtZU96ZldMTGRKbXVOcFVnclJGYnhRbU93T2YzeUV2MEdYc1E0dlZYckdWX1lQdllEZ0c1RDd3QTZaWW5senJwVHBHYTczQTdvaUQ5Mjh4S2haMHhmb0o4QjV4RUpXUnRwUmxPdVkxdzRuaWtWYl9tbVN0aXpsQVFqUmczcmgzNlpUdVFDNXZGSkp3SzRuRUJjakI0Rmh4WQ?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T15:44:46.447661",
+      "published_at": "2026-05-17T07:00:00"
+    }
+  ],
   "posted": [
     {
       "id": "6a634637-02ae-5afd-88a7-ff573c15272e",
@@ -222,5 +273,5 @@
       "posted_at": "2026-05-28T11:08:08.372933"
     }
   ],
-  "last_scrape": "2026-05-28T11:08:03.964272"
+  "last_scrape": "2026-05-28T15:45:06.512735"
 }
