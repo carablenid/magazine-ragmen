@@ -1,36 +1,5 @@
 {
-  "queue": [
-    {
-      "id": "7f5b2c17-18e4-54da-b6d9-4f93ad1230a9",
-      "artist": "Ati242",
-      "title": "Ati242: Everest (2021)",
-      "summary": "Ati242: Everest (2021)  IMDb",
-      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MSGp2WTBXcGlHQ29TbnhOZUdYU1pGN2xqS2ZNU2duUVhwN190LTM1bmwwSFBxQnVDNkt4enh0NGhTaFp4ZkpCNndHOVZ6SjJMT21Xcl9GUVQ0TU00TnVadVFvQ2g1MWhFcGdOUHRsUGpyQQ?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-28T10:35:29.446091",
-      "published_at": "2026-05-17T05:28:23"
-    },
-    {
-      "id": "64f1dc17-857f-5de8-ac7e-d6de6709b652",
-      "artist": "Norm Ender",
-      "title": "Norm Ender: Çiktik Yine Yollara (2011)",
-      "summary": "Norm Ender: Çiktik Yine Yollara (2011)  IMDb",
-      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5kT2hvandzeEpLamduWkFucEVWblMzZTd3WUx0Tk1XNkI1bF9DVWM3bTJHY094V09OSFdmUE1nTEN6ODJCNk5iVHVFbWRjaUVFOHcwTmVCTG1JRV9WYm5aaTFidnAzSy1acXlORkVVSQ?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-28T10:35:36.148506",
-      "published_at": "2026-05-15T19:00:45"
-    },
-    {
-      "id": "5090a3d8-2ea3-55f3-8f1a-721c450cca38",
-      "artist": "Defkhan",
-      "title": "Defkhan & Sagopa Kajmer: Onlarla Konusuyorum (2022)",
-      "summary": "Defkhan & Sagopa Kajmer: Onlarla Konusuyorum (2022)  IMDb",
-      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1vOHNHc0ROaFdYazRsbmh6VHVjMGp6UGZqNUQ5QlJoT1ZYUFFTX3dSTHdFc1AtRzllYVV2LUpHbXhJU0N5RXdCb0F5WV9zZ2xuTEtHSnRVdGN0bXYySGQzR2I3dzBORWVZQzBLM2l1Q3I?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-28T10:35:40.477221",
-      "published_at": "2026-05-14T12:51:14"
-    }
-  ],
+  "queue": [],
   "posted": [
     {
       "id": "6a634637-02ae-5afd-88a7-ff573c15272e",
