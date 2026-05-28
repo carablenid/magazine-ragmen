@@ -9,21 +9,24 @@ from datetime import datetime, timezone
 
 log = logging.getLogger(__name__)
 
-MAX_AGE_HOURS = 168  # 7 gün — bunun üzerindeki içerik KESİNLİKLE yayınlanmaz
+MAX_AGE_HOURS = 336  # 14 gün
 
 # Başlıkta geçen bu fragment'lar → RED
 BLACKLISTED_TITLE_FRAGMENTS = [
-    "imdb",           # IMDb (büyük/küçük harf → aşağıda case-insensitive)
+    "imdb",
     "(Film)", "(Albüm)", "(Single)",
+    "Episode #", "Episode #".lower(),
 ]
 
 # Başlıkta regex eşleşmesi → RED
 BLACKLISTED_TITLE_PATTERNS = [
-    r"nereli\?",            # "X Nereli?" — biyografik, magazin değil
-    r"\bkimdir\?",          # "X Kimdir?"
-    r"kaç yaşında",         # "kaç yaşında" — biyografik soru, magazin değil
-    r"gerçek adı ne",       # "gerçek adı ne" — biyografik
-    r"\(\d{4}\)\s*[-–|]",  # "Şarkı Adı (2019) - Site" — eski içerik
+    r"nereli\?",
+    r"\bkimdir\?",
+    r"kaç yaşında",
+    r"gerçek adı ne",
+    r"\(\d{4}\)\s*[-–|]",   # "Şarkı (2019) - Site" — veritabanı girişi
+    r"\bepisode\b",          # IMDb dizi bölümü
+    r"\(\d{4}\)\s*$",        # Başlık sadece "(2021)" ile bitiyor — film/dizi listesi
 ]
 
 BLACKLISTED_DOMAINS = [
@@ -38,6 +41,15 @@ CAPTION_URL_PATTERN = re.compile(
 
 # Caption'da asla geçmemeli
 CAPTION_BANNED_WORDS = ["camia"]
+
+# Model meta-yorumu yazarsa (caption üretemedi demek) yakala
+CAPTION_META_PATTERNS = [
+    r"caption yazabilmem için",
+    r"şu detaylar lazım",
+    r"spesifik bir olay.*lazım",
+    r"bu bilgiyle.*yazamam",
+]
+_CAPTION_META_RE = re.compile("|".join(CAPTION_META_PATTERNS), re.IGNORECASE)
 
 # Haber ajansı pasif yapıları — magazin değil, haber dili
 CAPTION_PASSIVE_WORDS = [
@@ -117,6 +129,9 @@ def validate_caption(caption: str) -> tuple[bool, list[str]]:
     m = _MEDIA_RE.search(caption)
     if m:
         errors.append(f"Medya adı/atıf: '{m.group()}'")
+
+    if _CAPTION_META_RE.search(caption):
+        errors.append("Model meta-yorum yazmış — gerçek caption değil")
 
     if errors:
         return False, errors
