@@ -28,3 +28,7 @@
 **Başlık:** Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?
 **Kaynak:** https://news.google.com/rss/articles/CBMingFBVV95cUxNakt0SEZWY1dKc3UxaWE2WW82dTJrTWFQZEY4d3BsWDJQTzNmOEhFRmgwWnZWbEdaZENYZXBRcVNrekpPM0o3QWQ1SngwSkYxUzBXOW5IdXpUdzdFMFVqMl9hX2I2UW94NTQ2T3BvUFZISlFlRnVzb1c1OGpUWEZmSzJ0aXdtdHBBTlRwUGJ6NE1pUWRHNVBLcmtLYS04QdIBmwFBVV95cUxPZkIwUXRYZm5SUXZLbXFFRTlrZ3k3Y21RQzI4WkZoUV8zWE4tbm8tSzFhUFpvUmJQWDQ0YnV6TEV6YkJvM19mODVQRUU4TFc3aHN5MlhzUlVSLW9sWktuNUNvY0JydGtiOVZ0SndVMmM1OFhGVTFDal9LVWxmcmo3OXJCY3F2QzBEclhHdkNlaTVXaTFTX0taUzFJcw?oc=5
 
+## 2026-05-28 06:32 UTC — Blok3
+**Başlık:** BLOK3’ün “La Catedral” gecesi yok satıyor
+**Kaynak:** https://news.google.com/rss/articles/CBMibEFVX3lxTFB3dEt0cjhZUVAydUd5Z2IxcjhFbGxfdDE4SFB6TEdaSmxlNjVDWlhGNUpWMkhzc1UtdHJnc01QOTBaX0d3azNoLVczNkJWU2N5MldxUHROdTNMa3ZtM2RVNUV2d21mOXBfZTJpOA?oc=5
+
