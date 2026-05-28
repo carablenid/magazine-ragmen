@@ -11,16 +11,6 @@
       "published_at": "2026-05-17T05:28:23"
     },
     {
-      "id": "6ad63d54-fa45-543e-802c-539ff1f1ed87",
-      "artist": "Ceza",
-      "title": "Kocaeli İzmit'te Ceza'nın Konserinde On Binlerce Hayranı Coştu",
-      "summary": "Kocaeli İzmit'te Ceza'nın Konserinde On Binlerce Hayranı Coştu  Mersin Haber",
-      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOERzSnVQd3lsMWtwNXRvZ1YzM1d5aXRreVkyYUZzXzY3VHBBdlZsNkpuVnFQR1dCa0YwR0o0ZER1ZDh3YVdzRWVzbTBZVWpvSWtac09mLVlfaUZqMVFpUC1xWXIyRjgzcDR2NkVzVFhXc2pIVTBVbTNuN0tueTV1OVByUHp1YVlQLWEweHQ1VXRSMWh0UlNldVNzOVlrNEtTdmlV0gFXQVVfeXFMT0J4UXU0cmxNSms1RThoaFlvVFhlRUFUUHRlUE5CT005WU02ZF8ydGJMd0ZzcFhBUVlnWEY5Q0NNZUJKMWk5cnFsTm5fRXFHY04yVmFKY2o0?oc=5",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
-      "scraped_at": "2026-05-28T15:44:53.076869",
-      "published_at": "2026-05-17T07:00:00"
-    },
-    {
       "id": "8759abee-5bc3-58cf-bb79-6bb3e3c49f19",
       "artist": "Yener Çevik",
       "title": "İstanbul Kanye West’e hazırlanıyor",
@@ -271,7 +261,18 @@
       "scraped_at": "2026-05-28T10:35:34.368446",
       "published_at": "2026-05-17T20:42:39",
       "posted_at": "2026-05-28T11:08:08.372933"
+    },
+    {
+      "id": "6ad63d54-fa45-543e-802c-539ff1f1ed87",
+      "artist": "Ceza",
+      "title": "Kocaeli İzmit'te Ceza'nın Konserinde On Binlerce Hayranı Coştu",
+      "summary": "Kocaeli İzmit'te Ceza'nın Konserinde On Binlerce Hayranı Coştu  Mersin Haber",
+      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOERzSnVQd3lsMWtwNXRvZ1YzM1d5aXRreVkyYUZzXzY3VHBBdlZsNkpuVnFQR1dCa0YwR0o0ZER1ZDh3YVdzRWVzbTBZVWpvSWtac09mLVlfaUZqMVFpUC1xWXIyRjgzcDR2NkVzVFhXc2pIVTBVbTNuN0tueTV1OVByUHp1YVlQLWEweHQ1VXRSMWh0UlNldVNzOVlrNEtTdmlV0gFXQVVfeXFMT0J4UXU0cmxNSms1RThoaFlvVFhlRUFUUHRlUE5CT005WU02ZF8ydGJMd0ZzcFhBUVlnWEY5Q0NNZUJKMWk5cnFsTm5fRXFHY04yVmFKY2o0?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T15:44:53.076869",
+      "published_at": "2026-05-17T07:00:00",
+      "posted_at": "2026-05-28T16:02:32.974909"
     }
   ],
-  "last_scrape": "2026-05-28T15:45:06.512735"
+  "last_scrape": "2026-05-28T16:01:21.674435"
 }
