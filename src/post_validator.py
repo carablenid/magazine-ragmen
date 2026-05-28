@@ -53,6 +53,13 @@ CAPTION_META_PATTERNS = [
     r"şu detaylar lazım",
     r"spesifik bir olay.*lazım",
     r"bu bilgiyle.*yazamam",
+    r"maalesef.*detay",
+    r"maalesef.*spesifik",
+    r"maalesef.*özet",
+    r"maalesef.*başlık",
+    r"sadece.*konser verdi\s*var",
+    r"bu başlık.*yok",
+    r"özette.*yok",
 ]
 _CAPTION_META_RE = re.compile("|".join(CAPTION_META_PATTERNS), re.IGNORECASE)
 

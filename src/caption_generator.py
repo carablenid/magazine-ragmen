@@ -60,9 +60,11 @@ def generate_caption(item: dict) -> str:
             f"Sanatçı: {item['artist']}\n"
             f"Başlık: {item['title']}\n"
             f"Özet: {item.get('summary', '')[:300]}\n\n"
-            f"Bu haber için Instagram caption yaz. "
-            f"'Başarılı geçti', 'güzel bir etkinlikti' gibi muğlak ifadeler kullanma. "
-            f"Rakam, rekor, olay, tepki gibi spesifik detay varsa onu öne çıkar. "
+            f"Bu içerik için Instagram caption yaz. "
+            f"İçerik ince bile olsa MUTLAKA bir caption yaz — 'yazamam', 'detay yok', 'maalesef' YASAK. "
+            f"İnce içerikte merak ve gerilim kullan: 'Kim bekliyordu ki!', 'Durumu vardı gecenin...', 'Sormayın neler oldu neler.' "
+            f"Spesifik detay varsa (rakam, rekor, alıntı, tepki) onu öne çıkar. "
+            f"'Başarılı geçti', 'güzel bir etkinlikti', 'coşkulu vakit' yasak. "
             f"Maksimum {CAPTION_MAX_CHARS} karakter, Türkçe."
         )
 
