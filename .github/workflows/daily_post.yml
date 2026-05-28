@@ -1,10 +1,6 @@
 name: Daily Instagram Post
 
 on:
-  schedule:
-    - cron: "30 6 * * *"   # 09:30 Türkiye (UTC+3)
-    - cron: "0 10 * * *"   # 13:00 Türkiye
-    - cron: "0 16 * * *"   # 19:00 Türkiye
   workflow_dispatch:
     inputs:
       dry_run:
