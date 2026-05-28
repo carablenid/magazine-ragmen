@@ -165,7 +165,18 @@
       "scraped_at": "2026-05-28T09:47:39.274473",
       "published_at": "2026-05-21T12:23:15",
       "posted_at": "2026-05-28T10:02:36.900847"
+    },
+    {
+      "id": "77ec0874-b4d3-5f97-9bf5-7545fd70c383",
+      "artist": "Yener Çevik",
+      "title": "Episode #1.10 (2021)",
+      "summary": "Episode #1.10 (2021)  IMDb",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE04dGFoazN4R1BUdzhwLU9jc1RuS0JQNXkwaVJnOEZSdGF6QUxFa2pCNTRZOHk3UUY3bEd5T0tpR2ROWXdPcHlWRlJTcjZ0dUloSndIYTB4ZEZrdjRTXy1aRUttMkluNDVGNEZsTjRsN2g?oc=5",
+      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw",
+      "scraped_at": "2026-05-28T10:27:24.430003",
+      "published_at": "2026-05-27T18:28:50",
+      "posted_at": "2026-05-28T10:27:35.312675"
     }
   ],
-  "last_scrape": "2026-05-28T10:06:00.633245"
+  "last_scrape": "2026-05-28T10:27:28.349437"
 }
