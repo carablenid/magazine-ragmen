@@ -40,3 +40,7 @@
 **Başlık:** Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?
 **Kaynak:** https://news.google.com/rss/articles/CBMingFBVV95cUxNakt0SEZWY1dKc3UxaWE2WW82dTJrTWFQZEY4d3BsWDJQTzNmOEhFRmgwWnZWbEdaZENYZXBRcVNrekpPM0o3QWQ1SngwSkYxUzBXOW5IdXpUdzdFMFVqMl9hX2I2UW94NTQ2T3BvUFZISlFlRnVzb1c1OGpUWEZmSzJ0aXdtdHBBTlRwUGJ6NE1pUWRHNVBLcmtLYS04QdIBmwFBVV95cUxPZkIwUXRYZm5SUXZLbXFFRTlrZ3k3Y21RQzI4WkZoUV8zWE4tbm8tSzFhUFpvUmJQWDQ0YnV6TEV6YkJvM19mODVQRUU4TFc3aHN5MlhzUlVSLW9sWktuNUNvY0JydGtiOVZ0SndVMmM1OFhGVTFDal9LVWxmcmo3OXJCY3F2QzBEclhHdkNlaTVXaTFTX0taUzFJcw?oc=5
 
+## 2026-05-28 10:56 UTC — Blok3
+**Başlık:** Rapçi Blok3 davasında uyanık avukattan 10 milyonluk şantaj: Yalancı şahidimiz hazır dosyayı büyütürüz
+**Kaynak:** https://news.google.com/rss/articles/CBMingFBVV95cUxNV0NtOTluWnc3UnZlcTdvaU1ZalBqUk5KeVcxTVZHdW5URVRsNGhzd3Rza0o5djZyVlR5RlBtQl9zTDRlTm9GaWFhd0FYNTczdUhjU21ka0RCUFhENnZzZGlqNERHLUE2T0s2MzJ0V2hFdEl4VEtRMEFrbklKYTBFZGc0ejdvQk41NTNFYXF2d1c3eUJ6VTBUOWZnZE1Odw?oc=5
+
