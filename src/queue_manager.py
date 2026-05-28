@@ -4,9 +4,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from config import QUEUE_MAX_AGE_DAYS
-
-PER_ARTIST_QUEUE_LIMIT = 2  # Kuyrukta sanatçı başına max item
+from config import QUEUE_MAX_AGE_DAYS, PER_ARTIST_QUEUE_LIMIT
 
 QUEUE_PATH = Path("data/queue.json")
 
