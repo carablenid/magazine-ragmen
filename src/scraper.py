@@ -101,13 +101,16 @@ def scrape_google_news() -> list[dict]:
             if pub and pub < cutoff:
                 continue
 
-            # Önce summary'den resim çekmeyi dene (hızlı)
             summary = getattr(entry, "summary", "") or ""
-            image_url = _extract_image_from_summary(summary)
 
-            # Yoksa article'a git (yavaş ama daha iyi)
+            # Önce article og:image — daha alakalı ve güvenilir
+            image_url = _og_image(entry.link)
+
+            # RSS summary'den yalnızca Google CDN placeholder'ı değilse al
             if not image_url:
-                image_url = _og_image(entry.link)
+                rss_img = _extract_image_from_summary(summary)
+                if rss_img and "lh3.googleusercontent.com" not in rss_img:
+                    image_url = rss_img
 
             pub = _entry_published(entry)
             item = make_item(

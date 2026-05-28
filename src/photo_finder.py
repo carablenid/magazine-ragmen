@@ -4,7 +4,7 @@ import logging
 import requests
 from PIL import Image
 
-from config import IMAGE_SIZE, ARTIST_PHOTO_TERMS
+from config import IMAGE_SIZE
 
 log = logging.getLogger(__name__)
 
@@ -49,44 +49,10 @@ def _wikipedia_image_url(artist: str) -> str | None:
                     data = r.json()
                     thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
                     if thumb:
-                        log.info("Wikipedia'dan fotoğraf bulundu: %s → %s", title, thumb[:60])
+                        log.info("Wikipedia'dan fotoğraf bulundu: %s", title)
                         return thumb
             except Exception as e:
                 log.debug("Wikipedia sorgusu başarısız (%s): %s", title, e)
-    return None
-
-
-def _ddgs_image_url(artist: str) -> str | None:
-    try:
-        from ddgs import DDGS
-    except ImportError:
-        try:
-            from duckduckgo_search import DDGS
-        except ImportError:
-            log.warning("ddgs paketi yüklü değil.")
-            return None
-
-    # Sanatçıya özel terim varsa önce onu kullan (yanlış kişi/nesne çıkmasın)
-    specific = ARTIST_PHOTO_TERMS.get(artist)
-    queries = [specific] if specific else []
-    queries += [
-        f"{artist} türk rapper sahne",
-        f"{artist} türkçe rap",
-        artist,
-    ]
-
-    for query in queries:
-        try:
-            with DDGS() as ddgs:
-                results = list(ddgs.images(query, max_results=10))
-            for r in results:
-                url = r.get("image", "")
-                if url.startswith("http"):
-                    log.info("DuckDuckGo'dan fotoğraf bulundu: %s", query)
-                    return url
-        except Exception as e:
-            log.debug("DuckDuckGo sorgusu başarısız (%s): %s", query, e)
-            continue
     return None
 
 
@@ -107,15 +73,11 @@ def _download_and_resize(url: str) -> Image.Image | None:
 
 
 def find_artist_photo(artist: str) -> Image.Image | None:
-    # Önce Wikipedia (güvenilir, rate limit yok)
     url = _wikipedia_image_url(artist)
     if not url:
-        # Sonra DuckDuckGo
-        url = _ddgs_image_url(artist)
-    if not url:
-        log.warning("'%s' için hiçbir kaynaktan fotoğraf bulunamadı.", artist)
+        log.warning("'%s' için Wikipedia'da fotoğraf bulunamadı — fallback kullanılacak.", artist)
         return None
     img = _download_and_resize(url)
     if img:
-        log.info("'%s' fotoğrafı başarıyla indirildi.", artist)
+        log.info("'%s' fotoğrafı Wikipedia'dan alındı.", artist)
     return img

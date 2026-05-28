@@ -1,9 +1,12 @@
 import json
 import uuid
+from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
 from config import QUEUE_MAX_AGE_DAYS
+
+PER_ARTIST_QUEUE_LIMIT = 2  # Kuyrukta sanatçı başına max item
 
 QUEUE_PATH = Path("data/queue.json")
 
@@ -34,20 +37,54 @@ def add_items(items: list[dict]) -> int:
     data = _load()
     posted_ids = {item["id"] for item in data["posted"]}
     existing_ids = {item["id"] for item in data["queue"]}
+    artist_counts = Counter(item["artist"] for item in data["queue"])
     added = 0
     for item in items:
-        if item["id"] not in posted_ids and item["id"] not in existing_ids:
-            data["queue"].append(item)
-            added += 1
+        if item["id"] in posted_ids or item["id"] in existing_ids:
+            continue
+        if artist_counts[item["artist"]] >= PER_ARTIST_QUEUE_LIMIT:
+            continue
+        data["queue"].append(item)
+        artist_counts[item["artist"]] += 1
+        added += 1
     data["last_scrape"] = datetime.utcnow().isoformat()
     _save(data)
     return added
 
 
 def pop_items(n: int) -> list[dict]:
+    """Round-robin: her slot farklı sanatçıdan, son postlardaki artistler son sıraya."""
     data = _load()
-    selected = data["queue"][:n]
-    data["queue"] = data["queue"][n:]
+    queue = data["queue"]
+
+    recent_artists = {item["artist"] for item in data.get("posted", [])[-5:]}
+    seen: set[str] = set()
+    selected = []
+
+    # Pass 1: son 5 postta olmayan sanatçılar — sanatçı başına 1 slot
+    for item in queue:
+        if len(selected) >= n:
+            break
+        if item["artist"] not in recent_artists and item["artist"] not in seen:
+            selected.append(item)
+            seen.add(item["artist"])
+
+    # Pass 2: kalan slotlar için recent sanatçılar — yine sanatçı başına 1
+    if len(selected) < n:
+        for item in queue:
+            if len(selected) >= n:
+                break
+            if item["artist"] not in seen:
+                selected.append(item)
+                seen.add(item["artist"])
+
+    # Pass 3: hâlâ dolmadıysa kalan her şey
+    if len(selected) < n:
+        leftovers = [i for i in queue if i["id"] not in {s["id"] for s in selected}]
+        selected.extend(leftovers[:n - len(selected)])
+
+    selected_ids = {item["id"] for item in selected}
+    data["queue"] = [i for i in queue if i["id"] not in selected_ids]
     _save(data)
     return selected
 
