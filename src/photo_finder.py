@@ -36,23 +36,23 @@ def _ascii_slug(text: str) -> str:
 
 def _wikipedia_image_url(artist: str) -> str | None:
     names = [artist, _ascii_slug(artist)]
-    for variant in _WIKI_VARIANTS:
-        for name in names:
-            title = variant.format(artist=name)
-            try:
-                url = (
-                    "https://en.wikipedia.org/api/rest_v1/page/summary/"
-                    + requests.utils.quote(title, safe="")
-                )
-                r = requests.get(url, headers=HEADERS, timeout=10)
-                if r.status_code == 200:
-                    data = r.json()
-                    thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
-                    if thumb:
-                        log.info("Wikipedia'dan fotoğraf bulundu: %s", title)
-                        return thumb
-            except Exception as e:
-                log.debug("Wikipedia sorgusu başarısız (%s): %s", title, e)
+    # Türkçe Wikipedia önce — Türk sanatçılar için daha kapsamlı
+    for lang in ("tr", "en"):
+        base = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/"
+        variants = ["{artist}", "{artist} (rapper)", "{artist} (müzisyen)", "{artist} (musician)"]
+        for variant in variants:
+            for name in names:
+                title = variant.format(artist=name)
+                try:
+                    r = requests.get(base + requests.utils.quote(title, safe=""), headers=HEADERS, timeout=10)
+                    if r.status_code == 200:
+                        data = r.json()
+                        thumb = data.get("originalimage", {}).get("source") or data.get("thumbnail", {}).get("source")
+                        if thumb:
+                            log.info("%s Wikipedia'dan fotoğraf bulundu: %s", lang.upper(), title)
+                            return thumb
+                except Exception as e:
+                    log.debug("Wikipedia sorgusu başarısız (%s %s): %s", lang, title, e)
     return None
 
 

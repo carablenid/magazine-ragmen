@@ -40,7 +40,12 @@ CAPTION_URL_PATTERN = re.compile(
 )
 
 # Caption'da asla geçmemeli
-CAPTION_BANNED_WORDS = ["camia"]
+CAPTION_BANNED_WORDS = [
+    "camia",
+    "başarılı",  # gazete dili
+    "verimli",
+    "coşkuyla",  # muğlak övgü
+]
 
 # Model meta-yorumu yazarsa (caption üretemedi demek) yakala
 CAPTION_META_PATTERNS = [
