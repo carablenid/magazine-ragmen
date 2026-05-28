@@ -24,3 +24,7 @@
 **Başlık:** Blok3’ten ilk açıklama: “Benim evim diye başka bir eve gidilmiş”
 **Kaynak:** https://news.google.com/rss/articles/CBMijAFBVV95cUxPRU9DX21hZjdvWGNJU3hsOVJDeXNPODNHNU9VTkQyWUhvaEdYVmdCeU5HTEJmMlJFbWJTQlhXdGt3LTRpanpieXFEYlJmQU1SdHBhd3h0Z001Q1hMZHNfc28tRVRJRWFvZFhGaHlpRkRBREkteEhrOVNiZXhOLTRhRndKVkZBcUhtMl9PZA?oc=5
 
+## 2026-05-28 02:14 UTC — Blok3
+**Başlık:** Gözaltına alındığı iddia edilen Blok3 ne açıklama yaptı? SON DAKİKA! Blok3 açıklama yaptı mı?
+**Kaynak:** https://news.google.com/rss/articles/CBMingFBVV95cUxNakt0SEZWY1dKc3UxaWE2WW82dTJrTWFQZEY4d3BsWDJQTzNmOEhFRmgwWnZWbEdaZENYZXBRcVNrekpPM0o3QWQ1SngwSkYxUzBXOW5IdXpUdzdFMFVqMl9hX2I2UW94NTQ2T3BvUFZISlFlRnVzb1c1OGpUWEZmSzJ0aXdtdHBBTlRwUGJ6NE1pUWRHNVBLcmtLYS04QdIBmwFBVV95cUxPZkIwUXRYZm5SUXZLbXFFRTlrZ3k3Y21RQzI4WkZoUV8zWE4tbm8tSzFhUFpvUmJQWDQ0YnV6TEV6YkJvM19mODVQRUU4TFc3aHN5MlhzUlVSLW9sWktuNUNvY0JydGtiOVZ0SndVMmM1OFhGVTFDal9LVWxmcmo3OXJCY3F2QzBEclhHdkNlaTVXaTFTX0taUzFJcw?oc=5
+
